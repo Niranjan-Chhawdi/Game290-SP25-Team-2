@@ -10,7 +10,7 @@ public class audio_manager : MonoBehaviour
     public AudioClip background;
     public AudioClip death;
     public AudioClip checkpoint;
-    public AudioClip bushhide;
+    public AudioClip walltouch;
     public AudioClip portalIn;
     public AudioClip portalOut;
 }
