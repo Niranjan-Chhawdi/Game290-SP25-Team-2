@@ -7,6 +7,6 @@ public class main_menu : MonoBehaviour
 {
    public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("First level");
+        SceneManager.LoadSceneAsync(int sceneBuildIndex);
     }
 }
