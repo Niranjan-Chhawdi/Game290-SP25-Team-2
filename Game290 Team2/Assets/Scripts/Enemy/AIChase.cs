@@ -9,11 +9,13 @@ public class AIChase : MonoBehaviour
     public float distanceBetween;
 
     private float distance;
+    private Vector2 originalPosition;
+    private bool returningBack = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        originalPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -26,9 +28,12 @@ public class AIChase : MonoBehaviour
 
         if(distance < distanceBetween)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            returningBack = false;
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-
+            transform.position = Vector2.MoveTowards(this.transform.position , player.transform.position , speed * Time.deltaTime);
         }
+        // else if (!returningBack) {
+        //     transform.position = Vector2.MoveTowards(transform.position, originalPosition, speed * Time.deltaTime);
+        // }
     }
 }
