@@ -72,19 +72,41 @@ public class RockPickup : MonoBehaviour
             rockRb.isKinematic = false; // Enable physics
             rockRb.gravityScale = 0;
 
-            Vector2 throwDirection = transform.right * (transform.localScale.x > 0 ? 1:-1); // Change if needed
+            // Calculate the direction using Atan2 for top-down movement
+            Vector2 throwDirection = GetThrowDirection(); // Get the throw direction based on the player's facing direction
+
+            if (throwDirection == Vector2.zero)
+            {
+                throwDirection = transform.up; // Default to up if no direction is available
+            }
+
             float throwStrength = 10f;
-            rockRb.velocity = throwDirection * throwStrength; // Apply force
+            rockRb.velocity = throwDirection * throwStrength; // Apply force to the rock
 
-            Debug.Log("Throwing rock with velocity: " + rockRb.velocity);
+            Debug.Log("Throwing rock in direction: " + throwDirection);
 
-            // Call StopRockAfterDistance to ensure rock doesn't move infinitely
+            // Call StopRockAfterDistance to ensure the rock doesn't move infinitely
             StartCoroutine(StopRockAfterDistance(rockRb, 3.5f));
 
             // Remove rock from inventory
             rockInventory.RemoveRock();
             currentRock = null;
         }
+    }
+
+    private Vector2 GetThrowDirection()
+    {
+        // Get the player's movement direction using Atan2 or transform-based method
+        Vector2 movement = transform.up; // Default to facing up
+
+        if (movement != Vector2.zero)
+        {
+            // Using Atan2 to calculate the direction
+            float angle = Mathf.Atan2(movement.y, movement.x); // Angle in radians
+            movement = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)); // Get the unit vector for the direction
+        }
+
+        return movement;
     }
 
     private IEnumerator StopRockAfterDistance(Rigidbody2D rockRb, float maxDistance)
