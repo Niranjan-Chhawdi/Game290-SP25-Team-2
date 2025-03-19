@@ -11,29 +11,41 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
 
-    private void Awake() {
+    private void Awake()
+    {
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         playerControls.Enable();
     }
 
-    private void Update() {
+    private void Update()
+    {
         PlayerInput();
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         Move();
     }
 
-    private void PlayerInput() {
+    private void PlayerInput()
+    {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
     }
 
-    private void Move() {
-        rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
+    private void Move()
+    {
+    rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
+
+    // Rotate player based on movement direction
+        if (movement != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90); // Adjust angle for correct facing
+        }
     }
 }
-
