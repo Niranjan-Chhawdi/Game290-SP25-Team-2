@@ -12513,7 +12513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oxygenBar: {fileID: 381089509}
   maxOxygen: 100
-  depletionRate: 3
+  depletionRate: 1
 --- !u!1 &738013174
 GameObject:
   m_ObjectHideFlags: 0
