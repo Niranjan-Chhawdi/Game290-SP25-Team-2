@@ -32,8 +32,5 @@ public class AIChase : MonoBehaviour
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
             transform.position = Vector2.MoveTowards(this.transform.position , player.transform.position , speed * Time.deltaTime);
         }
-        // else if (!returningBack) {
-        //     transform.position = Vector2.MoveTowards(transform.position, originalPosition, speed * Time.deltaTime);
-        // }
     }
 }

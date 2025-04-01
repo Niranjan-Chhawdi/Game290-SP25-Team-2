@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerOxygen : MonoBehaviour
@@ -42,8 +43,9 @@ public class PlayerOxygen : MonoBehaviour
 
     private void HandleOxygenDepletion()
     {
+        string currentSceneName = SceneManager.GetActiveScene().name;
         Debug.Log("Player has run out of oxygen!");
-        
+        SceneManager.LoadScene(currentSceneName);
     }
 
     public void RefillOxygen(float amount)
