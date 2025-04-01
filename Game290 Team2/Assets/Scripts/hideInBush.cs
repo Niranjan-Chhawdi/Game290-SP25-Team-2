@@ -5,7 +5,6 @@ using UnityEngine;
 public class hideInBush : MonoBehaviour
 {
     Collider2D bushCollider;
-
     SpriteRenderer spriteRenderer;
     public bool isHiding = false;
 

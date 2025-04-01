@@ -1,4 +1,3 @@
-// Used Some library :)
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,35 +11,41 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
 
-    private void Awake() {
-        //Used the unity PlayerControls
+    private void Awake()
+    {
         playerControls = new PlayerControls();
-        // took the Rigid body from the scene
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         playerControls.Enable();
     }
 
-    private void Update() {
-        // Used the Unity Input System
+    private void Update()
+    {
         PlayerInput();
     }
 
-    private void FixedUpdate() {
-        // Now finally our player Moving
+    private void FixedUpdate()
+    {
         Move();
     }
 
-    private void PlayerInput() {
-        // created the movement action map
+    private void PlayerInput()
+    {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
     }
 
-    private void Move() {
-        // now changing the value of the position
-        rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
+    private void Move()
+    {
+    rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
+
+    // Rotate player based on movement direction
+        if (movement != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90); // Adjust angle for correct facing
+        }
     }
 }
-
