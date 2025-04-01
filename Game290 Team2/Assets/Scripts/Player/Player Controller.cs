@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private float moveSpeed = 1f;
+    public float moveSpeed = 1f;
     public AbilityManager abilityManager;
     private PlayerControls playerControls;
     private Vector2 movement;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
 
     void Start()
@@ -61,9 +61,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
-        Move();
+        movement.x =Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+    }
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     private void PlayerInput()
