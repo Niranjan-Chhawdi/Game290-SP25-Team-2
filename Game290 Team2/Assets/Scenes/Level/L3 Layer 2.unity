@@ -20093,7 +20093,7 @@ GameObject:
   - component: {fileID: 885071072}
   - component: {fileID: 885071071}
   m_Layer: 0
-  m_Name: CS_levelStart (1)
+  m_Name: CS_lasers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
