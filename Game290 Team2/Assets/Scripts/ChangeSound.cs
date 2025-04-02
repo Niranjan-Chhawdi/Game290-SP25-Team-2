@@ -28,13 +28,13 @@ public class ChangeSound : MonoBehaviour
         {
             button.image.sprite = soundOffImage;
             isOn = false;
-           // audioSource.mute = true;
+            audioSource.mute = true;
         }
         else
         {
             button.image.sprite = soundOnImage;
             isOn = true;
-           // audioSource.mute = false;
+            audioSource.mute = false;
         }
     }
 }
