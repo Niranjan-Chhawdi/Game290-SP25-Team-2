@@ -3086,7 +3086,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.736828, y: -11.982389, z: -10}
+  m_LocalPosition: {x: 22.019579, y: -12.02223, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4112,7 +4112,7 @@ Transform:
   m_GameObject: {fileID: 727868728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.7, y: -17.9, z: 0}
+  m_LocalPosition: {x: 22.06, y: -16.75, z: 0}
   m_LocalScale: {x: 0.64278597, y: 0.64278597, z: 0.64278597}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4165,8 +4165,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005151348, y: -0.039077137}
-  m_Size: {x: 2.6453362, y: 2.6453362}
+  m_Offset: {x: -0.034386005, y: -0.058847524}
+  m_Size: {x: 1.9138061, y: 1.4590634}
   m_Direction: 1
 --- !u!114 &727868736
 MonoBehaviour:
@@ -4246,7 +4246,7 @@ Transform:
   m_GameObject: {fileID: 738013174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48.7, y: -17.9, z: -10}
+  m_LocalPosition: {x: 22.06, y: -16.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4865,9 +4865,10 @@ PolygonCollider2D:
       - {x: 0.32293797, y: 0.27640966}
       - {x: 0.32, y: 0.32}
       - {x: 0.27994883, y: 0.3178768}
-      - {x: -0.3235083, y: -0.29810372}
-      - {x: -0.32, y: -0.32}
-      - {x: -0.26964125, y: -0.31084862}
+      - {x: -0.3127012, y: -0.316477}
+      - {x: -0.3076805, y: -0.31060544}
+      - {x: -0.24474598, y: -0.23700547}
+      - {x: -0.22677863, y: -0.25709075}
   m_UseDelaunayMesh: 0
 --- !u!1001 &835028015
 PrefabInstance:
@@ -33257,11 +33258,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.29346076, y: 0.26224482}
-      - {x: 0.29999998, y: 0.26}
-      - {x: 0.31900036, y: 0.29658407}
-      - {x: 0.32, y: 0.32}
-      - {x: 0.28050324, y: 0.32228926}
-      - {x: 0.25730222, y: 0.28514487}
+      - {x: 0.25800622, y: 0.24584706}
+      - {x: 0.31237447, y: 0.30834657}
+      - {x: 0.2992933, y: 0.2958928}
+      - {x: 0.26633635, y: 0.26393318}
+      - {x: 0.26818556, y: 0.27139154}
       - {x: -0.31087524, y: -0.27668208}
       - {x: -0.32, y: -0.32}
       - {x: -0.27134192, y: -0.3056672}
