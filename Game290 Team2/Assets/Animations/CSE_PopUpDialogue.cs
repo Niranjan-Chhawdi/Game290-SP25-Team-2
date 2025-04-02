@@ -7,14 +7,60 @@ using TMPro;
 public class CSE_PopUpDialogue : CutSceneElementBase
 {
     
-    //[SerializeField] private TMP_Text popUpText;
+    
   
-    //[TextArea]
-    //[SerializeField] private string dialogue;
+    [TextArea]
+    [SerializeField] private string dialogue;
+    [SerializeField] private TextPosition textPosition;
 
-    //public override void Exectute()
-    
-        //popUpText.text = dialogue;
-    
+    [SerializeField] private Animator anim;
+    [SerializeField] private TMP_Text popUpText;
 
+    private bool isTextActive;
+
+
+    public override void Execute()
+    {
+        SetTextPosition();
+
+        anim.Play("FadeIn");
+        isTextActive = true;
+        popUpText.text = dialogue;
+    }
+    
+    private void Update()
+    {
+        if(Input.GetButtonDown("Interact") && isTextActive)
+                anim.Play("FadeOut");
+
+    }
+    
+    public void SetTextPosition()
+    {
+        RectTransform rectTransform = popUpText.rectTransform;
+
+        switch (textPosition)
+        {
+            case TextPosition.Top:
+                rectTransform.anchoredPosition = new Vector2(0, 130);
+                break;
+            case TextPosition.Middle:
+                rectTransform.anchoredPosition = new Vector2(0, 0);
+                break;
+            case TextPosition.Bottom:
+                rectTransform.anchoredPosition = new Vector2(0, -130);
+                break;
+
+        }
+
+      
+    }
+
+}
+
+public enum TextPosition
+{
+    Top,
+    Middle,
+    Bottom,
 }

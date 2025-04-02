@@ -10,6 +10,15 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
+    internal float normalized;
+    public Ability dashAbility; 
+
+
+    public Vector2 GetMovementDirection()
+{
+    return movement;
+}
+
 
     private void Awake()
     {
@@ -20,7 +29,23 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         playerControls.Enable();
+        playerControls.Movement.Dash.performed += ctx => ActivateDash();
     }
+
+    private void OnDisable()
+{
+    playerControls.Movement.Dash.performed -= ctx => ActivateDash();
+    playerControls.Disable();
+}
+
+private void ActivateDash()
+{
+    if (dashAbility != null)
+    {
+        dashAbility.Activate(gameObject);
+    }
+}
+
 
     private void Update()
     {
