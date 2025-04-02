@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyAIW : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public Transform[] waypoints; // Patrol points
     public float patrolSpeed = 2f;
