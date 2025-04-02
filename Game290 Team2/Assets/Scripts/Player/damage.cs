@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    public float damage = 10f;
 
-    public PlayerHealth phealth;
-    public float damage;
-    private void OnCollisionEnter2D(Collision2D other)
-
+    private void OnParticleCollision(GameObject other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            phealth.health -= damage;
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+
+            if (playerHealth != null)
+            {
+                playerHealth.health -= damage;
+            }
         }
     }
 }
