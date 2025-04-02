@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class pause_menu_nutton : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-    
+    private bool isMuted = false;
+
     public void pause()
     {
         pauseMenu.SetActive(true);
@@ -28,4 +29,16 @@ public class pause_menu_nutton : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
+
+    public void mute()
+    {
+        ToggleMute();
+    }
+
+    private void ToggleMute()
+    {
+        isMuted = !isMuted;
+        AudioListener.volume = isMuted ? 0 : 1;
+    }
 }
+
