@@ -408,7 +408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Blink
+  m_text: Blink Check Discord Message
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16170,7 +16170,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.222454, y: -4.7273297, z: -10}
+  m_LocalPosition: {x: -16.21673, y: -4.7273197, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16922,7 +16922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7803968f5e07db64d9229a8d53726993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 1
   abilityManager: {fileID: 2132211515}
+  rb: {fileID: 0}
 --- !u!1 &738013174
 GameObject:
   m_ObjectHideFlags: 0
