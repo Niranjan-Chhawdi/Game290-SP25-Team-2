@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 214233095}
   - component: {fileID: 214233094}
   - component: {fileID: 214233096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14618,7 +14618,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14699,9 +14699,9 @@ GameObject:
   - component: {fileID: 226997588}
   - component: {fileID: 226997595}
   - component: {fileID: 226997594}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MovingEnemy1 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15054,7 +15054,7 @@ GameObject:
   - component: {fileID: 241415180}
   - component: {fileID: 241415187}
   - component: {fileID: 241415186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MovingEnemy2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15488,7 +15488,7 @@ GameObject:
   - component: {fileID: 343737200}
   - component: {fileID: 343737201}
   - component: {fileID: 343737202}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StaticEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -16665,6 +16665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
+  isHiding: 0
 --- !u!70 &727868735
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -17177,7 +17178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1137719273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17571,9 +17572,9 @@ GameObject:
   - component: {fileID: 1519135427}
   - component: {fileID: 1519135429}
   - component: {fileID: 1519135428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MovingEnemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17851,9 +17852,9 @@ GameObject:
   - component: {fileID: 1600395468}
   - component: {fileID: 1600395474}
   - component: {fileID: 1600395475}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MovingEnemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
