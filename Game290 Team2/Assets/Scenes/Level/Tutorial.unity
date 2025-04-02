@@ -14618,7 +14618,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14905,9 +14905,6 @@ MonoBehaviour:
   player: {fileID: 727868728}
   speed: 4
   distanceBetween: 5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &229456123
 GameObject:
   m_ObjectHideFlags: 0
@@ -15059,7 +15056,7 @@ GameObject:
   - component: {fileID: 241415186}
   m_Layer: 7
   m_Name: MovingEnemy2 (1)
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15263,9 +15260,6 @@ MonoBehaviour:
   player: {fileID: 727868728}
   speed: 3
   distanceBetween: 4
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &260811889
 GameObject:
   m_ObjectHideFlags: 0
@@ -15655,9 +15649,6 @@ MonoBehaviour:
   player: {fileID: 727868728}
   speed: 4
   distanceBetween: 5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &369056585
 GameObject:
   m_ObjectHideFlags: 0
@@ -17787,9 +17778,6 @@ MonoBehaviour:
   player: {fileID: 727868728}
   speed: 3
   distanceBetween: 5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &1568121023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18070,9 +18058,6 @@ MonoBehaviour:
   player: {fileID: 727868728}
   speed: 3
   distanceBetween: 5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &1622739077
 GameObject:
   m_ObjectHideFlags: 0
