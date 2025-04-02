@@ -19,7 +19,7 @@ public class TutorialLevel : MonoBehaviour
         Debug.Log("123");
         if (collision.gameObject.tag == "Player")
         {
-        	SceneManager.LoadScene("L3 Layer1");           
+        	SceneManager.LoadScene("L3 Layer 1");           
         }
 
 
