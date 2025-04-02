@@ -1,27 +1,15 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class SmokeController : MonoBehaviour
+public class SomkeController : MonoBehaviour
 {
-    public ParticleSystem smoke;
-    private bool smokeActive = true;
+    public GameObject objectToDestroy;
 
-    void Start()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        GetComponent<Button>().onClick.AddListener(ToggleSmoke);
-    }
-
-    void ToggleSmoke()
-    {
-        smokeActive = !smokeActive;
-
-        if (smokeActive)
+        if (other.CompareTag("Player") && objectToDestroy != null)
         {
-            smoke.Play();
-        }
-        else
-        {
-            smoke.Stop();
+            Destroy(objectToDestroy);
+            Debug.Log("Smoke Screenoff!");
         }
     }
 }
