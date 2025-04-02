@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TutorialLevel : MonoBehaviour
+public class L2 : MonoBehaviour
 {
     Collider2D doorCollider;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class TutorialLevel : MonoBehaviour
         Debug.Log("123");
         if (collision.gameObject.tag == "Player")
         {
-        	SceneManager.LoadScene("L3 Layer 1");           
+        	SceneManager.LoadScene("L3 Layer 2");           
         }
 
 
