@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
+    internal float normalized;
 
     private void Awake()
     {

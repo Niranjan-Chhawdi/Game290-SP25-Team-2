@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Ability : MonoBehaviour 
+public abstract class Ability : ScriptableObject
 {
-    public string abilityName;
-    public Sprite abilityIcon;
+    public new string name;
+    public float cooldownTime;
+    public float activeTIme;
 
-    // Abstract method to be overridden by specific ability classes (like Stun, Teleport)
-    public abstract void Use(GameObject player);
-
-
-    public virtual float GetCooldownTime()
+    public virtual void Activate(GameObject parent)
     {
-        return 0f;
+
     }
 }
