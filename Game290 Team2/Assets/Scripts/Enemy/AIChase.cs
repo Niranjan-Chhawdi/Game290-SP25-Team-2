@@ -30,6 +30,11 @@ public class AIChase : MonoBehaviour
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
+        else if (distance < distanceBetween && hit.collider == false && !playerIsHiding){
+            Debug.DrawRay(transform.position, direction * distance, Color.green);
+            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        }
         else
         {
             Debug.DrawRay(transform.position, direction * distance, Color.red);
