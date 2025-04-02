@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!61 &1597698
 BoxCollider2D:
@@ -15317,7 +15317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!114 &226997595
 MonoBehaviour:
@@ -15675,7 +15675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!114 &241415187
 MonoBehaviour:
@@ -16129,7 +16129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!114 &343737202
 MonoBehaviour:
@@ -16527,7 +16527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!61 &471755929
 BoxCollider2D:
@@ -16915,7 +16915,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.247864, y: -1.56425, z: -10}
+  m_LocalPosition: {x: 35.9047, y: 26.56539, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17856,7 +17856,7 @@ Transform:
   m_GameObject: {fileID: 727868728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.07, y: -0.75, z: 0}
+  m_LocalPosition: {x: 36, y: 28.4, z: 0}
   m_LocalScale: {x: 0.64278597, y: 0.64278597, z: 0.64278597}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17924,9 +17924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080ae41d2ed692b43b35538994234a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
   maxHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 620080919}
 --- !u!114 &727868737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17969,7 +17969,7 @@ Transform:
   m_GameObject: {fileID: 738013174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.07, y: -0.75, z: -10}
+  m_LocalPosition: {x: 36, y: 28.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18566,7 +18566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!61 &1015229454
 BoxCollider2D:
@@ -19651,7 +19651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!114 &1519135428
 MonoBehaviour:
@@ -20103,7 +20103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!114 &1600395475
 MonoBehaviour:
@@ -20926,7 +20926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
+  phealth: {fileID: 727868736}
   damage: 10
 --- !u!61 &1684422705
 BoxCollider2D:
@@ -50336,7 +50336,6 @@ GameObject:
   - component: {fileID: 1842215520}
   - component: {fileID: 1842215523}
   - component: {fileID: 1842215522}
-  - component: {fileID: 1842215521}
   m_Layer: 0
   m_Name: DoorLock
   m_TagString: Untagged
@@ -50359,19 +50358,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1695953165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1842215521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842215519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be2d786114e87a54b854c74911a4a49e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 794579765}
 --- !u!61 &1842215522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50379,7 +50365,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842215519}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

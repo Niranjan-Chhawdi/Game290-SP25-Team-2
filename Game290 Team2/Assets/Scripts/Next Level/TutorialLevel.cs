@@ -4,10 +4,9 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevelScrpt : MonoBehaviour
+public class TutorialLevel : MonoBehaviour
 {
     Collider2D doorCollider;
-    public string nextlevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +19,7 @@ public class NextLevelScrpt : MonoBehaviour
         Debug.Log("123");
         if (collision.gameObject.tag == "Player")
         {
-        	SceneManager.LoadScene("Tutorial");           
+        	SceneManager.LoadScene("L3 Layer1");           
         }
 
 
