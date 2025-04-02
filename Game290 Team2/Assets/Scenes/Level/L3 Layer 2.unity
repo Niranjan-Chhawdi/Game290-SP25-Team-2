@@ -983,8 +983,8 @@ MonoBehaviour:
   duration: 0
   dialogue: "(The door is carved with two words of warning)\n\nEvil Awaits \n\n(F)"
   textPosition: 0
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &81010941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1140,8 +1140,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &126513429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2013,8 +2013,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &228050846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20131,8 +20131,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &885071072
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20402,8 +20402,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &954560061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20937,8 +20937,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &1076374791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21525,6 +21525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2654136214833055561, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
+      propertyPath: phealth
+      value: 
+      objectReference: {fileID: 727868736}
     - target: {fileID: 5630169078922512729, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -21635,8 +21639,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &1196596341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21973,8 +21977,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &1261563484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32180,6 +32184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2654136214833055561, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
+      propertyPath: phealth
+      value: 
+      objectReference: {fileID: 727868736}
     - target: {fileID: 5630169078922512729, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -32729,8 +32737,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &1646572351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39388,8 +39396,8 @@ MonoBehaviour:
 
     (F)'
   textPosition: 1
-  anim: {fileID: 0}
-  popUpText: {fileID: 0}
+  anim: {fileID: 647507029}
+  popUpText: {fileID: 647507030}
 --- !u!61 &1985317326
 BoxCollider2D:
   m_ObjectHideFlags: 0
