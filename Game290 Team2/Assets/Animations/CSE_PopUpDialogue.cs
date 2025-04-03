@@ -6,9 +6,9 @@ using TMPro;
 //reference = https://www.youtube.com/watch?v=JmLIxXiKFqI&t=319s
 public class CSE_PopUpDialogue : CutSceneElementBase
 {
-    
-    
-  
+
+
+
     [TextArea]
     [SerializeField] private string dialogue;
     [SerializeField] private TextPosition textPosition;
@@ -27,14 +27,14 @@ public class CSE_PopUpDialogue : CutSceneElementBase
         isTextActive = true;
         popUpText.text = dialogue;
     }
-    
+
     private void Update()
     {
-        if(Input.GetButtonDown("Interact") && isTextActive)
-                anim.Play("FadeOut");
+        if (Input.GetButtonDown("Interact") && isTextActive)
+            anim.Play("FadeOut");
 
     }
-    
+
     public void SetTextPosition()
     {
         RectTransform rectTransform = popUpText.rectTransform;
@@ -53,7 +53,7 @@ public class CSE_PopUpDialogue : CutSceneElementBase
 
         }
 
-      
+
     }
 
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8906720618046474328}
   m_Layer: 0
   m_Name: Bush
-  m_TagString: Untagged
+  m_TagString: canHideIn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,10 +27,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7099925724236338366}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.6, y: -9.7, z: 8.410037}
-  m_LocalScale: {x: 2.287624, y: 2.287624, z: 2.287624}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -75595604, guid: 0c9ba145313648743bc90c55c494a010, type: 3}
-  m_Color: {r: 0.5058824, g: 0.8745098, b: 0.3647059, a: 1}
+  m_Color: {r: 1, g: 0.95283014, b: 0.95283014, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -118,8 +118,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007354674, y: -0.014116117}
-  m_Size: {x: 1.2689296, y: 1.1109276}
+  m_Offset: {x: -0.007, y: -0.014}
+  m_Size: {x: 1.25, y: 1.11}
   m_Direction: 1
 --- !u!114 &8906720618046474328
 MonoBehaviour:
@@ -133,4 +133,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc63ab44d927ff479a8537edd25e783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHiding: 0
