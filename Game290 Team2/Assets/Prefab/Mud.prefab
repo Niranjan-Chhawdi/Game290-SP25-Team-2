@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 5630169078922512729}
   - component: {fileID: 2654136214833055561}
   - component: {fileID: 4867838320849054872}
-  - component: {fileID: 9039247777742515870}
+  - component: {fileID: 7509542262316566151}
+  - component: {fileID: 18660802796576808}
+  - component: {fileID: 7749489360791210443}
   m_Layer: 10
   m_Name: Mud
   m_TagString: Untagged
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1970017349
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad263984c8f57a943affa15bce66004b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -157,7 +159,77 @@ PolygonCollider2D:
       - {x: 0.21008112, y: 0.16067135}
       - {x: 0.12725368, y: 0.25322735}
   m_UseDelaunayMesh: 0
---- !u!50 &9039247777742515870
+--- !u!114 &7509542262316566151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405793770040247343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phealth: {fileID: 0}
+  damage: 10
+--- !u!60 &18660802796576808
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405793770040247343}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.14068827, y: 0.23389874}
+      - {x: -0.23806784, y: 0.09842766}
+      - {x: -0.25138175, y: -0.01748439}
+      - {x: -0.23454861, y: -0.117248185}
+      - {x: -0.21248609, y: -0.17408101}
+      - {x: -0.14588903, y: -0.24742037}
+      - {x: 0.10236911, y: -0.24580687}
+      - {x: 0.16048764, y: -0.20973924}
+      - {x: 0.24794215, y: -0.13092741}
+      - {x: 0.21008112, y: 0.16067135}
+      - {x: 0.12725368, y: 0.25322735}
+  m_UseDelaunayMesh: 0
+--- !u!50 &7749489360791210443
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

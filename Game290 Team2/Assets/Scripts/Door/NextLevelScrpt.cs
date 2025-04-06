@@ -17,10 +17,9 @@ public class NextLevelScrpt : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("123");
         if (collision.gameObject.tag == "Player")
         {
-        	SceneManager.LoadScene("Tutorial");           
+            SceneManager.LoadScene(nextlevel);
         }
 
 
@@ -29,6 +28,6 @@ public class NextLevelScrpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
