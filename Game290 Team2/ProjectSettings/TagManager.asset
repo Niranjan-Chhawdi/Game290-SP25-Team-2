@@ -42,11 +42,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: ground
     uniqueID: 3069462049
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: 'environment '
     uniqueID: 3784741265
@@ -56,4 +56,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4119026933
+    locked: 0
+  - name: Top
+    uniqueID: 1006979081
     locked: 0

@@ -4,14 +4,18 @@ using UnityEngine.Rendering;
 
 public class PlayerPathFinding : MonoBehaviour
 {
-    public GameObject mouseIndicator;
-    private NavMeshAgent agent;
+    private GameObject mouseIndicator;
+    private Transform player;
+
 
     void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.SetDestination(mouseIndicator.transform.position);
+        mouseIndicator = GameObject.Find("MouseIndicator");
+        if (mouseIndicator == null)
+        {
+            Debug.LogError("MouseIndicator not found in the scene.");
+        }
+        player = GetComponent<Transform>();
     }
 
     void Update()
@@ -22,10 +26,14 @@ public class PlayerPathFinding : MonoBehaviour
         worldPosition.z = 0;
         mouseIndicator.transform.position = worldPosition;
 
-        if (agent.destination != mouseIndicator.transform.position)
+        //move to mouse position
+        if (Vector3.Distance(player.position, mouseIndicator.transform.position) > 0.1f)
         {
-            agent.SetDestination(mouseIndicator.transform.position);
+            player.position = Vector3.MoveTowards(player.position, mouseIndicator.transform.position, Time.deltaTime * 5f);
         }
+
+
+
     }
 
 }

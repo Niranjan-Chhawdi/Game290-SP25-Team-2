@@ -9,7 +9,7 @@ public class hideInBush : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player is hiding in the bush");
+            //Debug.Log("Player is hiding in the bush");
 
             spriteRenderer = collision.GetComponent<SpriteRenderer>();
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.5f);

@@ -12,6 +12,11 @@ public class PlayerAnimaation : MonoBehaviour
     PlayerState playerState;
     Animator animator;
     NavMeshAgent agent;
+    public string walkingUp = "mainChar-walkingUp";
+    public string walkingDown = "mainChar-walkingDown";
+    public string walkingLeft = "mainChar-walkingLeft";
+    public string walkingRight = "mainChar-walkingRight";
+    public string idle = "mainChar-idle";
     void Awake()
     {
         playerState = PlayerState.walking;
@@ -43,23 +48,23 @@ public class PlayerAnimaation : MonoBehaviour
                 {
                     //horizontal movement
                     if (direction.x > 0)
-                        animator.Play("mainChar-walkingRight");
+                        animator.Play(walkingRight);
                     else
-                        animator.Play("mainChar-walkingLeft");
+                        animator.Play(walkingLeft);
                 }
                 else
                 {
                     // vertical movement
                     if (direction.y > 0)
-                        animator.Play("mainChar-walkingUp");
+                        animator.Play(walkingUp);
                     else
-                        animator.Play("mainChar-walkingDown");
+                        animator.Play(walkingDown);
                 }
             }
             else
             {
                 // idle
-                animator.Play("mainChar-idle");
+                animator.Play(idle);
             }
         }
     }

@@ -6,12 +6,12 @@ public class EnemyAI : MonoBehaviour
 {
     private EnemyPathfinding enemyPathfinding;
 
-    public float stepSize = 1f; 
-    public int totalSteps = 3; 
-    public float stepDelay = 0.5f; 
+    public float stepSize = 1f;
+    public int totalSteps = 3;
+    public float stepDelay = 0.5f;
 
-    private bool movingUp = true; 
-    private int currentStep = 0; 
+    private bool movingUp = true;
+    private int currentStep = 0;
 
     private void Awake()
     {
@@ -25,17 +25,17 @@ public class EnemyAI : MonoBehaviour
 
     private IEnumerator MoveInSteps()
     {
-        while (true) 
+        while (true)
         {
             Vector2 targetPosition = GetNextStepPosition();
             enemyPathfinding.MoveTo(targetPosition);
             currentStep++;
 
-            
+
             if (currentStep >= totalSteps)
             {
-                movingUp = !movingUp; 
-                currentStep = 0; 
+                movingUp = !movingUp;
+                currentStep = 0;
             }
 
             yield return new WaitForSeconds(stepDelay);

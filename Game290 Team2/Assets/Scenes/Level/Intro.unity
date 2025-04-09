@@ -18075,6 +18075,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8805907566122357741, guid: a88a0a879e431a44e93341eae269983e, type: 3}
+      propertyPath: m_AutoBraking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805907566122357741, guid: a88a0a879e431a44e93341eae269983e, type: 3}
+      propertyPath: m_Acceleration
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

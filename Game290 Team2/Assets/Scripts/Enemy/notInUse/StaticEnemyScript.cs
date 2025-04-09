@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StaticEnemyScript : MonoBehaviour
 {
-    public Transform respawnPoint; 
+    public Transform respawnPoint;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
             Respawn(other.gameObject);
         }
@@ -18,7 +18,7 @@ public class StaticEnemyScript : MonoBehaviour
     {
         if (respawnPoint != null)
         {
-            player.transform.position = respawnPoint.position; 
+            player.transform.position = respawnPoint.position;
             Debug.Log("Player Respawned!");
         }
         else
