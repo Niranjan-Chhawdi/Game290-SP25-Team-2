@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private AudioClip healthSoundClip;
+    private AudioSource AudioSource;
 
     public float health;
     public float maxHealth;
