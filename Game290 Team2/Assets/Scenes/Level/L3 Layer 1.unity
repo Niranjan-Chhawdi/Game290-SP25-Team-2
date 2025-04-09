@@ -74181,10 +74181,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6592906660688860645, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: phealth
-      value: 
-      objectReference: {fileID: 470297384}
     - target: {fileID: 8069638742645728220, guid: a99768f55037a964eb321ad8386c997f, type: 3}
       propertyPath: m_Name
       value: MovingEnemy (1)
@@ -77547,6 +77543,27 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &1621171399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2405793770040247343, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
+  m_PrefabInstance: {fileID: 1737135132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621171403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621171399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa0352a4d56abd42ad2fc69deb72448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Size: {x: 0.51106095, y: 0.43523398, z: 4}
+  m_Center: {x: -0.0049562454, y: -0.013570771, z: 0}
+  m_Area: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &1629822607
 GameObject:
   m_ObjectHideFlags: 0
@@ -78620,8 +78637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
   damage: 10
+  damageRadius: 1
 --- !u!4 &1726390255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4513676079681443456, guid: 7ed646559845997428989484635642b1, type: 3}
@@ -78638,10 +78655,6 @@ PrefabInstance:
     - target: {fileID: 2405793770040247343, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
       propertyPath: m_Name
       value: Mud
-      objectReference: {fileID: 0}
-    - target: {fileID: 2654136214833055561, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
-      propertyPath: phealth
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6520107438938563605, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -78686,7 +78699,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2405793770040247343, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1621171403}
   m_SourcePrefab: {fileID: 100100000, guid: 0286b8426628a8348aa8d1ac0deadeb6, type: 3}
 --- !u!1001 &1744703209
 PrefabInstance:
@@ -239424,8 +239440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba09db53100cf4fac9859444ff721c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phealth: {fileID: 0}
   damage: 10
+  damageRadius: 1
 --- !u!1001 &2112528662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -239785,7 +239801,7 @@ PrefabInstance:
     - target: {fileID: 6592906660688860645, guid: a99768f55037a964eb321ad8386c997f, type: 3}
       propertyPath: phealth
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 470297384}
     - target: {fileID: 8069638742645728220, guid: a99768f55037a964eb321ad8386c997f, type: 3}
       propertyPath: m_Name
       value: MovingEnemy

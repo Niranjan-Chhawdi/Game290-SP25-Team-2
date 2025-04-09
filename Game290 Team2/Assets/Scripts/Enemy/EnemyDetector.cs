@@ -77,7 +77,7 @@ public class enemyDetector : MonoBehaviour
             return false;
         }
 
-        if (DistanceToPlayer() < searchRadius) 
+        if (DistanceToPlayer() < searchRadius)
         {
             Vector2 origin = transform.position;
             Vector2 direction = ((Vector2)target - origin).normalized;
