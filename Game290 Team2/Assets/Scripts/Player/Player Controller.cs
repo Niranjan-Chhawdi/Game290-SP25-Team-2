@@ -5,54 +5,41 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
     public bool isHiding = false;
-    private PlayerControls playerControls;
-    private Vector2 movement;
     internal float normalized;
-    public Ability dashAbility;
+    public bool canNotBeTraced = false;
+    SpriteRenderer spriteRenderer;
 
-
-    public Vector2 GetMovementDirection()
-    {
-        return movement;
-    }
 
 
     private void Awake()
     {
-        playerControls = new PlayerControls();
-    }
-
-    private void OnEnable()
-    {
-        playerControls.Enable();
-        playerControls.Movement.Dash.performed += ctx => ActivateDash();
-    }
-
-    private void OnDisable()
-    {
-        playerControls.Movement.Dash.performed -= ctx => ActivateDash();
-        playerControls.Disable();
-    }
-
-    private void ActivateDash()
-    {
-        if (dashAbility != null)
-        {
-            dashAbility.Activate(gameObject);
-        }
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
     private void Update()
     {
-        PlayerInput();
+
+        if (isHiding)
+        {
+            HidePlayer();
+        }
+        else
+        {
+            ShowPlayer();
+        }
+
+
     }
-    private void PlayerInput()
+
+    void HidePlayer()
     {
-        movement = playerControls.Movement.Move.ReadValue<Vector2>();
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.5f);
+
     }
-
-
+    void ShowPlayer()
+    {
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+    }
 }

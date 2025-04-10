@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Damage : MonoBehaviour
@@ -9,6 +10,9 @@ public class Damage : MonoBehaviour
     public float damage = 20f;
     GameObject player;
     public float damageRadius = 1f;
+    float timeOutOfSight = 0f;
+    enemyDetector enemyDetector;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -18,6 +22,8 @@ public class Damage : MonoBehaviour
             Debug.LogError("Player or PlayerHealth component not found on player object.");
             return;
         }
+        enemyDetector = GetComponentInParent<enemyDetector>();
+
     }
 
     float distance()
@@ -34,6 +40,10 @@ public class Damage : MonoBehaviour
             {
                 phealth.health -= damage * Time.deltaTime; // Apply damage over time
                 Debug.Log("Player health: " + phealth.health);
+                if (enemyDetector != null)
+                {
+                    enemyDetector.timeOutOfSight = 0f; // Reset the timer when the player is in sight
+                }
             }
             else
             {

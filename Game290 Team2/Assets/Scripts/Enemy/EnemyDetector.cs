@@ -6,7 +6,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class enemyDetector : MonoBehaviour
 {
-    private float timeOutOfSight = 0f;
+    public float timeOutOfSight = 0f;
     public float giveUpTime = 5f;
     public float searchRadius = 5f;
 
@@ -65,6 +65,14 @@ public class enemyDetector : MonoBehaviour
                 pathFinding.currentMethod = enemyPathFinding.ScoutMethod.in2Spot;
                 timeOutOfSight = 0f;
             }
+        }
+
+        if (playerController.canNotBeTraced)
+        {
+            // If the player is hiding, stop chasing and reset the timer
+            pathFinding.currentMethod = enemyPathFinding.ScoutMethod.in2Spot;
+            timeOutOfSight = 0f; // reset the timer when the player is in sight
+            playerController.canNotBeTraced = false; // Reset the flag after processing
         }
     }
 

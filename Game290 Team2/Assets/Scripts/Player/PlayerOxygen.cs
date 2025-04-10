@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerOxygen : MonoBehaviour
 {
-    public Image oxygenBar; 
+    public Image oxygenBar;
     public float maxOxygen = 100f;
     public float depletionRate = 5f;
 
