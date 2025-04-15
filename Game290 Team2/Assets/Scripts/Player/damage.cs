@@ -39,7 +39,7 @@ public class Damage : MonoBehaviour
             if (phealth != null)
             {
                 phealth.health -= damage * Time.deltaTime; // Apply damage over time
-                Debug.Log("Player health: " + phealth.health);
+                //Debug.Log("Player health: " + phealth.health);
                 if (enemyDetector != null)
                 {
                     enemyDetector.timeOutOfSight = 0f; // Reset the timer when the player is in sight

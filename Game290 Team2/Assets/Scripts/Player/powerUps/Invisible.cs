@@ -33,7 +33,6 @@ public class Invisible : MonoBehaviour
     // call this to be invisible
     public void DoInvisible()
     {
-
         isInvisible = true;
     }
 }

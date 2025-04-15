@@ -56347,10 +56347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6141249604756203195, guid: a88a0a879e431a44e93341eae269983e, type: 3}
-      propertyPath: m_Color.a
-      value: 0.047058824
-      objectReference: {fileID: 0}
+    - target: {fileID: 5683127201976334596, guid: a88a0a879e431a44e93341eae269983e, type: 3}
+      propertyPath: stonePrefab
+      value: 
+      objectReference: {fileID: 1151287238013948698, guid: 166a5cd5cfeca134bbe419effcf7cfb0, type: 3}
     - target: {fileID: 7860872691205585408, guid: a88a0a879e431a44e93341eae269983e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -239059,93 +239059,23 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 14, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 16, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 17, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 18, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 19, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 20, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 22, y: 32, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 25
+  - m_RefCount: 20
     m_Data: {fileID: 11400000, guid: 4c0af1fc649fd3544a28fbc9de03494e, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 182a569b4ddc6574f92e95a7101d8e53, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 6d0d11eac9b8a2c4683269ff36daa2cc, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 25
+  - m_RefCount: 20
     m_Data: {fileID: 21300000, guid: eb0a8d8669763ac44b7cdc0b0175d33b, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: a2e51160c6ca19249aadf56429ccf576, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: c2e314abc7a2703449a9cdff0cdaf758, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 34
+  - m_RefCount: 27
     m_Data:
       e00: 1
       e01: 0
@@ -239164,7 +239094,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 34
+  - m_RefCount: 27
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -239571,17 +239501,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 882577398391900478, guid: a99768f55037a964eb321ad8386c997f, type: 3}
   m_PrefabInstance: {fileID: 2811727096535283107}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2120639067 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4208441519383730640, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-  m_PrefabInstance: {fileID: 2811727096535283107}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ea3ffd0107fc04a959dfd00ff77bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2134105663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4500654269277551560, guid: 1d4fd8a111c43e344bb391fd8040946b, type: 3}
@@ -239754,34 +239673,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1754105699661044415, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: giveUpTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754105699661044415, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: pathFinding
-      value: 
-      objectReference: {fileID: 2120639067}
-    - target: {fileID: 1754105699661044415, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: searchRadius
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518632515283286826, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518632515283286826, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -175940363
-      objectReference: {fileID: 0}
-    - target: {fileID: 5626106219527826658, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6592906660688860645, guid: a99768f55037a964eb321ad8386c997f, type: 3}
-      propertyPath: phealth
-      value: 
-      objectReference: {fileID: 470297384}
     - target: {fileID: 8069638742645728220, guid: a99768f55037a964eb321ad8386c997f, type: 3}
       propertyPath: m_Name
       value: MovingEnemy
