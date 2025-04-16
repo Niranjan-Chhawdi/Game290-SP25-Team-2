@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.047058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.007843138}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -160,10 +160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdf4aa7d755ef24fb64597a823782ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stonePrefab: {fileID: 0}
+  stonePrefab: {fileID: 1151287238013948698, guid: 166a5cd5cfeca134bbe419effcf7cfb0, type: 3}
   force: 8
-  stunTime: 2
-  doThrow: 0
+  stunTime: 8
 --- !u!1 &1709092465478766370
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfeb7969e369184a8d7da3cdb58b046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startInvisible: 0
   duration: 5
 --- !u!1 &2962792947433943034
 GameObject:
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1f44158d3494b45b58ac31a693739a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doStun: 0
+  startStun: 0
   duration: 5
   range: 5
 --- !u!1 &4622265396573422204
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19afaba23fe57014d840c81568ae52ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDashing: 0
+  startDashing: 0
 --- !u!1 &7860872691205585408
 GameObject:
   m_ObjectHideFlags: 0

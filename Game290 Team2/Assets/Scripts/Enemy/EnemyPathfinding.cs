@@ -54,7 +54,6 @@ public class EnemyPathFinding : MonoBehaviour
 
     void Start()
     {
-
         agent.SetDestination(dest1.position);
     }
     // Update is called once per frame
