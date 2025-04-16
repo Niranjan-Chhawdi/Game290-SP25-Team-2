@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //reference =https://www.youtube.com/watch?v=ry4I6QyPw4E&t=12s
@@ -7,14 +5,17 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Dash : Ability
 {
-    public float dashVelocity;
+    public float dashVelocity = 10f;
 
     public override void Activate(GameObject parent)
     {
-        PlayerController movement = parent.GetComponent<PlayerController>();
-        Rigidbody2D rigidbody = parent.GetComponent<Rigidbody2D>();
+        PlayerController controller = parent.GetComponent<PlayerController>();
+        Rigidbody2D rb = parent.GetComponent<Rigidbody2D>();
 
-        //rigidbody.velocity = movement.normalized
-           // * dashVelocity;
+        if (controller != null && rb != null)
+        {
+            Vector2 direction = controller.GetMovementDirection();
+            rb.AddForce(direction.normalized * dashVelocity, ForceMode2D.Impulse);
+        }
     }
 }

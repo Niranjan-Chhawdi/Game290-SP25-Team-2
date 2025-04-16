@@ -20,7 +20,7 @@ public class NextLevelScrpt : MonoBehaviour
         Debug.Log("123");
         if (collision.gameObject.tag == "Player")
         {
-        	SceneManager.LoadScene("Second Level");           
+        	SceneManager.LoadScene("Tutorial");           
         }
 
 

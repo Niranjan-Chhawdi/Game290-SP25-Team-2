@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorMech : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class DoorMech : MonoBehaviour
     {
         if (other.CompareTag("Player") && isColliderDisabled) 
         {
-            Respawn(other.gameObject);
+            SceneManager.LoadScene("Tutorial");
         }
     }
 
