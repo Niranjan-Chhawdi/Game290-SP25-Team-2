@@ -1,32 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
 
-    public PlayerHealth phealth;
-    public float damage = 10f;
-    private void OnCollisionEnter2D(Collision2D other)
+    private PlayerHealth phealth;
+    public float damage = 20f;
+    GameObject player;
+    public float damageRadius = 1f;
+    float timeOutOfSight = 0f;
+    enemyDetector enemyDetector;
 
+    void Awake()
     {
-        if(other.gameObject.CompareTag("Player"))
+        player = GameObject.FindGameObjectWithTag("Player");
+        phealth = player.GetComponent<PlayerHealth>();
+        if (player == null && phealth == null)
         {
-            phealth.health -= damage;
+            Debug.LogError("Player or PlayerHealth component not found on player object.");
+            return;
         }
+        enemyDetector = GetComponentInParent<enemyDetector>();
+
     }
 
-    private void OnParticleCollision(GameObject other)
+    float distance()
     {
-        Debug.Log("Hit: " + other.name);
-        if (other.CompareTag("Player"))
+        float distance = Vector3.Distance(player.transform.position, transform.position);
+        return distance;
+    }
+
+    void Update()
+    {
+        if (distance() < damageRadius)
         {
-            Debug.Log("Smoke hit the player!");
-            
-            PlayerHealth health = other.GetComponent<PlayerHealth>();
-            if (health != null)
+            if (phealth != null)
             {
-                health.health -= damage;
+                phealth.health -= damage * Time.deltaTime; // Apply damage over time
+                //Debug.Log("Player health: " + phealth.health);
+                if (enemyDetector != null)
+                {
+                    enemyDetector.timeOutOfSight = 0f; // Reset the timer when the player is in sight
+                }
+            }
+            else
+            {
+                Debug.LogError("PlayerHealth component not found on player object.");
+                return;
             }
         }
     }
