@@ -1,38 +1,95 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-
+    SpriteRenderer spriteRenderer;
     public float health;
     public float maxHealth;
     public Image healthBar;
-    private Vector3 startPosition; 
+    private Vector3 startPosition;
+    NavMeshAgent agent;
+    bool isDead = false;
+    public Color hurtColor = new Color(1, 0.5f, 0.5f);
 
-    // Start is called before the first frame update
+    private float hurtTimer = 0f;
+    private bool isPlayingHurtAnimation = false;
+    private float respawnTimer = 0f;
+    private bool isWaitingToRespawn = false;
+
     void Start()
     {
         maxHealth = health;
         startPosition = transform.position;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
 
-        if(health <= 0)
+        if (health <= 0 && !isDead)
         {
-             Respawn();
+            die();
         }
+
+        if (isPlayingHurtAnimation)
+        {
+            hurtTimer -= Time.deltaTime;
+            if (hurtTimer <= 0f)
+            {
+                spriteRenderer.color = Color.white;
+                isPlayingHurtAnimation = false;
+            }
+        }
+
+        if (isWaitingToRespawn)
+        {
+            respawnTimer -= Time.deltaTime;
+            if (respawnTimer <= 0f)
+            {
+                Respawn();
+                isWaitingToRespawn = false;
+            }
+        }
+    }
+
+    public void takeDamge(float damage)
+    {
+        if (health <= 0 || isDead) return;
+
+        health -= damage;
+
+        if (!isPlayingHurtAnimation)
+        {
+            isPlayingHurtAnimation = true;
+            hurtTimer = 0.4f;
+            spriteRenderer.color = hurtColor;
+        }
+    }
+
+    void die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+        transform.rotation = Quaternion.Euler(0, 0, 90);
+        spriteRenderer.color = hurtColor;
+        agent.isStopped = true;
+        isWaitingToRespawn = true;
+        respawnTimer = 3f;
     }
 
     void Respawn()
     {
-        transform.position = startPosition; // Move player back to start
-        health = maxHealth; // Restore health
+        isDead = false;
+        agent.isStopped = false;
+        transform.position = startPosition;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        spriteRenderer.color = Color.white;
+        health = maxHealth;
         Debug.Log("Player Respawned!");
     }
 }
