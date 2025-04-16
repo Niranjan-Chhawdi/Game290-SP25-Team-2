@@ -7,12 +7,16 @@ public class StunEnemy : MonoBehaviour
 {
 
     GameObject nearestEnemy;
-    public bool doStun = false;
+    public bool startStun = false;
     public float duration = 5f;
     float timer;
     public float range = 5f;
     bool isStunning = false;
     // Start is called before the first frame update
+    public void doStun()
+    {
+        startStun = true;
+    }
 
     GameObject FindNearestEnemy()
     {
@@ -51,17 +55,17 @@ public class StunEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (doStun)
+        if (startStun)
         {
             nearestEnemy = FindNearestEnemy();
             if (nearestEnemy != null)
             {
-                nearestEnemy.GetComponent<EnemyBehavior>().PauseEnemy(duration);
+                nearestEnemy.GetComponent<EnemyPausing>().PauseEnemy(duration);
             }
             else
             {
                 Debug.Log("No enemy found");
-                doStun = false;
+                startStun = false;
             }
         }
     }

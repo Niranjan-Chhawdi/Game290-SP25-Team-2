@@ -6,7 +6,7 @@ public class Invisible : MonoBehaviour
 {
     GameObject player;
     PlayerController playerController;
-    bool isInvisible = false; // Flag to check if the player is invisible
+    public bool startInvisible = false; // Flag to check if the player is invisible
     public float duration = 5f; // Duration of invisibility in seconds
     void Awake()
     {
@@ -16,14 +16,14 @@ public class Invisible : MonoBehaviour
 
     void Update()
     {
-        if (isInvisible)
+        if (startInvisible)
         {
             playerController.isHiding = true;
             duration -= Time.deltaTime; // Decrease the duration by the time passed since last frame
             if (duration <= 0)
             {
                 // Reset the invisibility flag and duration
-                isInvisible = false;
+                startInvisible = false;
                 playerController.isHiding = false;
                 duration = 5f; // Reset to original duration
             }
@@ -33,6 +33,6 @@ public class Invisible : MonoBehaviour
     // call this to be invisible
     public void DoInvisible()
     {
-        isInvisible = true;
+        startInvisible = true;
     }
 }

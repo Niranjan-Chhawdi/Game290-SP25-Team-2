@@ -15,7 +15,7 @@ public class enemyDetector : MonoBehaviour
     private PlayerController playerController;
     private float distance;
     public LayerMask obstacleLayer;
-    public enemyPathFinding pathFinding;
+    public EnemyPathFinding pathFinding;
 
 
     void Awake()
@@ -38,7 +38,7 @@ public class enemyDetector : MonoBehaviour
 
     void Update()
     {
-        if (pathFinding.currentMethod == enemyPathFinding.ScoutMethod.chasing)
+        if (pathFinding.currentMethod == EnemyPathFinding.ScoutMethod.chasing)
         {
             agent.SetDestination(player.position);
         }
@@ -47,7 +47,7 @@ public class enemyDetector : MonoBehaviour
 
         if (inSight)
         {
-            pathFinding.currentMethod = enemyPathFinding.ScoutMethod.chasing;
+            pathFinding.currentMethod = EnemyPathFinding.ScoutMethod.chasing;
             agent.SetDestination(player.position);
             timeOutOfSight = 0f; // reset the timer when the player is in sight
         }
@@ -62,7 +62,7 @@ public class enemyDetector : MonoBehaviour
             if (timeOutOfSight >= giveUpTime)
             {
                 // stop chasing the player after certain time
-                pathFinding.currentMethod = enemyPathFinding.ScoutMethod.in2Spot;
+                pathFinding.currentMethod = EnemyPathFinding.ScoutMethod.in2Spot;
                 timeOutOfSight = 0f;
             }
         }
@@ -70,7 +70,7 @@ public class enemyDetector : MonoBehaviour
         if (playerController.canNotBeTraced)
         {
             // If the player is hiding, stop chasing and reset the timer
-            pathFinding.currentMethod = enemyPathFinding.ScoutMethod.in2Spot;
+            pathFinding.currentMethod = EnemyPathFinding.ScoutMethod.in2Spot;
             timeOutOfSight = 0f; // reset the timer when the player is in sight
             playerController.canNotBeTraced = false; // Reset the flag after processing
         }

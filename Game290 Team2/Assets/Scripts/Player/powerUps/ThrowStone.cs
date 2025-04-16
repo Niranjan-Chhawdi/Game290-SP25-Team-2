@@ -6,16 +6,19 @@ public class ThrowStone : MonoBehaviour
 {
     public GameObject stonePrefab;
     public float force = 8f;
-    public float stunTime = 2f;
-    public bool doThrow = false;
+    public float stunTime = 8f;
+    bool isThrowing = false;
 
     private bool stoneOnTheWay = false;
     private GameObject currentStone;
     private float timer = 0f;
-
+    public void doThrow()
+    {
+        isThrowing = true;
+    }
     void Update()
     {
-        if (doThrow && stonePrefab != null)
+        if (isThrowing && stonePrefab != null)
         {
             if (!stoneOnTheWay)
             {
@@ -28,14 +31,16 @@ public class ThrowStone : MonoBehaviour
                 {
                     Destroy(currentStone);
                     stoneOnTheWay = false;
-                    doThrow = false;
+                    isThrowing
+             = false;
                 }
             }
 
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                doThrow = false;
+                isThrowing
+         = false;
                 stoneOnTheWay = false;
                 if (currentStone != null) Destroy(currentStone);
             }
@@ -64,7 +69,7 @@ public class ThrowStone : MonoBehaviour
             float dist = Vector2.Distance(pos, enemy.transform.position);
             if (dist < 1.5f)
             {
-                EnemyBehavior eb = enemy.GetComponent<EnemyBehavior>();
+                EnemyPausing eb = enemy.GetComponent<EnemyPausing>();
                 if (eb != null)
                 {
                     eb.PauseEnemy(stunTime);

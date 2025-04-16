@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class enemyPathFinding : MonoBehaviour
+public class EnemyPathFinding : MonoBehaviour
 {
 
     NavMeshAgent agent;

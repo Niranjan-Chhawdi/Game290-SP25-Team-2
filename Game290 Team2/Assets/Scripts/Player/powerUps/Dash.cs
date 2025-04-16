@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Dash : MonoBehaviour
 {
     NavMeshAgent agent;
-    public bool isDashing = false;
+    public bool startDashing = false;
     Vector2 directionToMouse;
 
 
@@ -23,11 +23,11 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDashing)
+        if (startDashing)
         {
             Vector2 dashDirection = getMouseDirection();
             agent.Move(dashDirection * 4f); // Move the player in the direction of the mouse with a speed of 5 units
-            isDashing = false; // Reset the dashing state after moving
+            startDashing = false; // Reset the dashing state after moving
         }
     }
     Vector2 getMouseDirection()
@@ -39,6 +39,6 @@ public class Dash : MonoBehaviour
     }
     public void DoDash()
     {
-        isDashing = true;
+        startDashing = true;
     }
 }
