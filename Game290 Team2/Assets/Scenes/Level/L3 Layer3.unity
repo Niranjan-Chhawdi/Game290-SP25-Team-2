@@ -434,6 +434,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1462138491750746876, guid: a88a0a879e431a44e93341eae269983e, type: 3}
+      propertyPath: oxygenBar
+      value: 
+      objectReference: {fileID: 1608326471}
+    - target: {fileID: 2490616335004620520, guid: a88a0a879e431a44e93341eae269983e, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1767378252}
     - target: {fileID: 2600566755571115345, guid: a88a0a879e431a44e93341eae269983e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4
@@ -476,7 +484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7860872691205585408, guid: a88a0a879e431a44e93341eae269983e, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -495,6 +503,7 @@ GameObject:
   - component: {fileID: 507561998}
   - component: {fileID: 507561997}
   - component: {fileID: 507561999}
+  - component: {fileID: 507562000}
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
@@ -13858,6 +13867,42 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!19719996 &507562000
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507561995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &588386530
 GameObject:
   m_ObjectHideFlags: 0
@@ -85756,7 +85801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5488164
+      value: 1.5486904
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.y
