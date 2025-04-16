@@ -56552,25 +56552,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5683127201976334596, guid: a88a0a879e431a44e93341eae269983e, type: 3}
-      propertyPath: stunTime
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5683127201976334596, guid: a88a0a879e431a44e93341eae269983e, type: 3}
-      propertyPath: stonePrefab
-      value: 
-      objectReference: {fileID: 1151287238013948698, guid: 166a5cd5cfeca134bbe419effcf7cfb0, type: 3}
-    - target: {fileID: 6141249604756203195, guid: a88a0a879e431a44e93341eae269983e, type: 3}
-      propertyPath: m_Color.a
-      value: 0.007843138
-      objectReference: {fileID: 0}
     - target: {fileID: 7860872691205585408, guid: a88a0a879e431a44e93341eae269983e, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990715566337724121, guid: a88a0a879e431a44e93341eae269983e, type: 3}
-      propertyPath: duration
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

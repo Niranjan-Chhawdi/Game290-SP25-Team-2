@@ -7,11 +7,11 @@ using UnityEngine.Timeline;
 public class enemyMarks : MonoBehaviour
 {
     public enemyDetector detector;
-    public GameObject shocking;
-    public GameObject confusing;
-    public GameObject dizzy;
+    public SpriteRenderer shocking;
+    public SpriteRenderer confusing;
+    public SpriteRenderer dizzy;
     NavMeshAgent agent;
-    GameObject currentMark;
+    SpriteRenderer currentMark;
     public EnemyPathFinding enemyPathfinding;
 
     float timer = 2f;
@@ -41,10 +41,10 @@ public class enemyMarks : MonoBehaviour
         }
         else
         {
-            dizzy.SetActive(false);
+            dizzy.color = new Color(dizzy.color.r, dizzy.color.g, dizzy.color.b, 0);
         }
     }
-    void showMarker(GameObject marker)
+    void showMarker(SpriteRenderer marker)
     {
         if (currentMark == marker)
         {
@@ -52,10 +52,11 @@ public class enemyMarks : MonoBehaviour
         }
         if (currentMark != null)
         {
-            currentMark.SetActive(false);
+
+            currentMark.color = new Color(currentMark.color.r, currentMark.color.g, currentMark.color.b, 0);
         }
         currentMark = marker;
-        currentMark.SetActive(true);
+        currentMark.color = new Color(currentMark.color.r, currentMark.color.g, currentMark.color.b, 1);
 
     }
 }

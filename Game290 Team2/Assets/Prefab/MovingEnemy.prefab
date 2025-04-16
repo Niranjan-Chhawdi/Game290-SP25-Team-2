@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detector: {fileID: 1754105699661044415}
-  shocking: {fileID: 6699581281518033123}
-  confusing: {fileID: 7486748925512205822}
-  dizzy: {fileID: 5683335628138572693}
+  shocking: {fileID: 4667140049856061918}
+  confusing: {fileID: 85527477854204327}
+  dizzy: {fileID: 5913224490201640527}
   enemyPathfinding: {fileID: 4208441519383730640}
 --- !u!1 &5533544123418493009
 GameObject:
@@ -328,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1802297602733589328
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -1455081897, guid: cd15f4928bd674e4c93b04a06bf991db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -433,7 +433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4116672634989618293
 Transform:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 2115040416, guid: b42518e377afb544e94e57a080785579, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -517,7 +517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6594875718393371577
 Transform:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -247105531, guid: b42518e377afb544e94e57a080785579, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
