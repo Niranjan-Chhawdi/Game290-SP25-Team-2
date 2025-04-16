@@ -7,12 +7,12 @@ using UnityEngine.AI;
 
 public class EnemyPathFinding : MonoBehaviour
 {
-
     NavMeshAgent agent;
     private Transform dest1;
     private Transform dest2;
     private Transform lastDest;
     public bool arrived = false;
+    public float remainingDistance = 0.2f;
     public enum ScoutMethod
     {
         in2Spot,
@@ -60,6 +60,7 @@ public class EnemyPathFinding : MonoBehaviour
 
     void Update()
     {
+        remainingDistance = agent.remainingDistance;
         if (currentMethod == ScoutMethod.in2Spot)
         {
             setDest();
@@ -82,7 +83,7 @@ public class EnemyPathFinding : MonoBehaviour
 
     void setDest()
     {
-        if (agent.remainingDistance < 0.2f)
+        if (agent.remainingDistance < 0.1f)
         {
             arrived = true;
         }
@@ -90,30 +91,25 @@ public class EnemyPathFinding : MonoBehaviour
 
     void switchIn2Spots()
     {
-        if (lastDest == null)
-        {
-            agent.SetDestination(dest1.position);
-            lastDest = dest1;
-        }
-        arrived = false;
-        if (lastDest == dest1 && agent.destination == dest1.position)
-        {
-            return;
-        }
-        if (lastDest == dest2 && agent.destination == dest2.position)
-        {
-            return;
-        }
         if (lastDest == dest1)
         {
-            agent.SetDestination(dest2.position);
             lastDest = dest2;
+            agent.SetDestination(dest2.position);
+            arrived = false;
         }
         else if (lastDest == dest2)
         {
-            agent.SetDestination(dest1.position);
             lastDest = dest1;
+            agent.SetDestination(dest1.position);
+            arrived = false;
         }
+        else
+        {
+            lastDest = dest1;
+            agent.SetDestination(dest1.position);
+            arrived = false;
+        }
+
     }
 
 }
