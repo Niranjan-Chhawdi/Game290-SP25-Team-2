@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 7265481885202017893}
   - component: {fileID: 8990715566337724121}
   m_Layer: 8
-  m_Name: stunEnmeny
+  m_Name: stunEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,6 +533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHiding: 0
   canNotBeTraced: 0
+  hasKey: 0
+  keyNum: 0
 --- !u!50 &6550584809798617495
 Rigidbody2D:
   serializedVersion: 4

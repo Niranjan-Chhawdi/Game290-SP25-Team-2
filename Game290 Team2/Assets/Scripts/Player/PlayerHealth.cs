@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
+    PlayerController playerController;
     public float health;
     public float maxHealth;
     public Image healthBar;
@@ -17,13 +18,13 @@ public class PlayerHealth : MonoBehaviour
     private bool isPlayingHurtAnimation = false;
     private float respawnTimer = 0f;
     private bool isWaitingToRespawn = false;
-
-    void Start()
+    void Awake()
     {
         maxHealth = health;
         startPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
+        playerController = GetComponent<PlayerController>();
     }
 
     void Update()
@@ -89,6 +90,10 @@ public class PlayerHealth : MonoBehaviour
         transform.position = startPosition;
         transform.rotation = Quaternion.Euler(0, 0, 0);
         spriteRenderer.color = Color.white;
+        playerController.hasKey = false;
+        playerController.keyNum = 0;
+        playerController.gunPieces = 0;
+        playerController.hasGun = false;
         health = maxHealth;
         Debug.Log("Player Respawned!");
     }

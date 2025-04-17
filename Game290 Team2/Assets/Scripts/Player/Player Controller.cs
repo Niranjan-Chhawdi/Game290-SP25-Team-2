@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     public bool hasKey = false;
     public int keyNum = 0;
 
-    bool hasGun = false;
-    int gunPieces = 0;
+    public bool hasGun = false;
+    public int gunPieces = 0;
 
 
 

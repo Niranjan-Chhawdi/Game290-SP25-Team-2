@@ -1,45 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class DoorMech : MonoBehaviour
 {
-     public Transform respawnPoint; 
+    bool doorLocked = true;
+    public Transform respawnPoint;
     public GameObject Key;
-    public BoxCollider2D boxCollider;
+    PlayerController playerController;
+    NavMeshObstacle navMeshObstacle;
 
-    private bool isColliderDisabled = false;
-    
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
-        if (boxCollider != null)
-        {
-            boxCollider.enabled = true;
-        }
-    }   
+        navMeshObstacle = GetComponent<NavMeshObstacle>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Key == null && boxCollider != null && !isColliderDisabled)
+        if (navMeshObstacle != null && playerController.hasKey && playerController.keyNum > 0)
         {
-            boxCollider.enabled = false;
-            isColliderDisabled = true;
-            Debug.Log("Door Unlocked");
+            if (doorLocked)
+            {
+                navMeshObstacle.enabled = false;
+                Debug.Log("Door Unlocked");
+                doorLocked = false;
+            }
+
         }
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && isColliderDisabled) 
-        {
-            SceneManager.LoadScene("Tutorial");
-        }
-    }
-
     void Respawn(GameObject player)
     {
         if (respawnPoint != null)
