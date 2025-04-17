@@ -6,15 +6,19 @@ using UnityEngine;
 public class abilityManager : MonoBehaviour
 {
     public Dash dash;
+    public bool EnableDash = true;
     public float DashColdown = 5f;
     public TextMeshProUGUI dashText;
     public Invisible invisible;
+    public bool EnableInvisible = true;
     public float InvisibleColdown = 5f;
     public TextMeshProUGUI invisibleText;
     public StunEnemy stunEnemy;
+    public bool EnableStunEnemy = true;
     public float StunEnemyColdown = 5f;
     public TextMeshProUGUI stunEnemyText;
     public ThrowStone throwStone;
+    public bool EnableThrowStone = true;
     public float ThrowStoneColdown = 5f;
     public TextMeshProUGUI throwStoneText;
 
@@ -26,22 +30,22 @@ public class abilityManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && Dashtimer <= 0f)
+        if (Input.GetKeyDown(KeyCode.Q) && Dashtimer <= 0f && EnableDash)
         {
             dash.DoDash();
             Dashtimer = DashColdown;
         }
-        if (Input.GetKeyDown(KeyCode.W) && Invisibletimer <= 0f)
+        if (Input.GetKeyDown(KeyCode.W) && Invisibletimer <= 0f && EnableInvisible)
         {
             invisible.DoInvisible();
             Invisibletimer = InvisibleColdown;
         }
-        if (Input.GetKeyDown(KeyCode.E) && StunEnemytimer <= 0f)
+        if (Input.GetKeyDown(KeyCode.E) && StunEnemytimer <= 0f && EnableStunEnemy)
         {
             stunEnemy.doStun();
             StunEnemytimer = StunEnemyColdown;
         }
-        if (Input.GetKeyDown(KeyCode.R) && ThrowStonetimer <= 0f)
+        if (Input.GetKeyDown(KeyCode.R) && ThrowStonetimer <= 0f && EnableThrowStone)
         {
             throwStone.doThrow();
             ThrowStonetimer = ThrowStoneColdown;
