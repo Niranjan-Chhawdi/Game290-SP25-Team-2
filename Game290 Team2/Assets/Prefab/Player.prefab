@@ -610,6 +610,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 0
   healthBar: {fileID: 0}
+  hurtColor: {r: 1, g: 0.5, b: 0.5, a: 1}
 --- !u!114 &1462138491750746876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oxygenBar: {fileID: 0}
   maxOxygen: 100
-  depletionRate: 0.5
+  depletionRate: 1.2
 --- !u!195 &8805907566122357741
 NavMeshAgent:
   m_ObjectHideFlags: 0
