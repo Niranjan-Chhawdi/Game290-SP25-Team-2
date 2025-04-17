@@ -981,7 +981,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: "(The door is carved with two words of warning)\n\nEvil Awaits \n\n(F)"
+  dialogue: '(The door is carved with two words of warning)
+
+
+    Aliens Prohibited
+
+    (F)'
   textPosition: 0
   anim: {fileID: 647507029}
   popUpText: {fileID: 647507030}
@@ -1135,7 +1140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'I''m here it''s ok...
+  dialogue: 'PIP!! Take these.
+
+    (Bag of Rocks)
 
 
     (F)'
@@ -1713,7 +1720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'He''s... menacing...evil, as if scince itself has turned mad...
+  dialogue: 'He''s... menacing...evil, as if science itself has turned mad...
 
 
     (F)'
@@ -2882,7 +2889,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.736828, y: -11.982389, z: -10}
+  m_LocalPosition: {x: 36.731483, y: -11.9824095, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40275,7 +40282,7 @@ Transform:
   m_GameObject: {fileID: 1196596338}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.0023264484, w: 0.9999973}
-  m_LocalPosition: {x: 50, y: -32.6, z: 0.066522114}
+  m_LocalPosition: {x: 51.43, y: -33.06, z: 0.066522114}
   m_LocalScale: {x: 5.4167714, y: 3.3066669, z: 3.695623}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40569,7 +40576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'Your safe now...
+  dialogue: 'Your safe now... take my ability.
 
 
     (F)'
@@ -63685,15 +63692,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 19.344084, y: 21.915886}
-      - {x: 12.586573, y: 22.020586}
-      - {x: 8.986902, y: 21.852047}
-      - {x: -9.877575, y: 21.752169}
-      - {x: -30.046284, y: 22.143675}
-      - {x: -30.538568, y: 6.6668916}
-      - {x: -30.307224, y: -20.163967}
-      - {x: 51.004807, y: -19.943874}
-      - {x: 50.73732, y: 21.809008}
+    - - {x: 41.79692, y: 46.86634}
+      - {x: 25.227983, y: 40.98779}
+      - {x: 13.134406, y: 39.594147}
+      - {x: -7.0184336, y: 40.22068}
+      - {x: -20.466389, y: 42.70472}
+      - {x: -41.096474, y: 37.98487}
+      - {x: -44.732452, y: 13.763832}
+      - {x: -46.95781, y: -1.2028966}
+      - {x: -37.651325, y: -35.721867}
+      - {x: 71.26451, y: -28.930029}
+      - {x: 65.149475, y: 37.892143}
   m_UseDelaunayMesh: 0
 --- !u!1001 &2110674066
 PrefabInstance:
