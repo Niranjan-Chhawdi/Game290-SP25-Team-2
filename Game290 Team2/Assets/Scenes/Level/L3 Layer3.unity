@@ -839,11 +839,11 @@ PrefabInstance:
       objectReference: {fileID: 1713262121}
     - target: {fileID: 2600566755571115345, guid: a88a0a879e431a44e93341eae269983e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.27
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 2600566755571115345, guid: a88a0a879e431a44e93341eae269983e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.86
+      value: -16.08
       objectReference: {fileID: 0}
     - target: {fileID: 2600566755571115345, guid: a88a0a879e431a44e93341eae269983e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -88105,19 +88105,19 @@ PrefabInstance:
       objectReference: {fileID: 962543613}
     - target: {fileID: 3498100534133764897, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.42
+      value: 1.4700004
       objectReference: {fileID: 0}
     - target: {fileID: 3498100534133764897, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.7799993
+      value: -15.999999
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.27
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.86
+      value: -16.08
       objectReference: {fileID: 0}
     - target: {fileID: 5808914302169549231, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -88677,7 +88677,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  canGetKey: 1
+  abilityManager: {fileID: 0}
+  isKey: 0
+  isFriend: 0
+  AbilityName: None
 --- !u!61 &1162760784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89178,7 +89181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  canGetKey: 1
+  abilityManager: {fileID: 0}
+  isKey: 0
+  isFriend: 0
+  AbilityName: None
 --- !u!212 &1376715987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90186,7 +90192,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: cdc2acbf08984584fb08a34a07505485, type: 3}
 --- !u!224 &1890126376 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8541756722053979297, guid: cdc2acbf08984584fb08a34a07505485, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4331744365936123431, guid: cdc2acbf08984584fb08a34a07505485, type: 3}
   m_PrefabInstance: {fileID: 1890126375}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1892661422 stripped

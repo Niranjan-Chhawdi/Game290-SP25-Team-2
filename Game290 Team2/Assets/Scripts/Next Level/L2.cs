@@ -8,6 +8,7 @@ public class L2 : MonoBehaviour
 {
     public PlayerController playerController;
     public int keyToExit = 1;
+    public string nextLevelName = "L3 Layer 2";
     Collider2D doorCollider;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class L2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && playerController.keyNum >= keyToExit)
         {
-            SceneManager.LoadScene("L3 Layer 2");
+            SceneManager.LoadScene(nextLevelName);
         }
     }
 }

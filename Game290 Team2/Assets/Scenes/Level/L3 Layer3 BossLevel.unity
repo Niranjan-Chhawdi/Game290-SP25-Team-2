@@ -89171,6 +89171,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3874195571193903490, guid: cdc2acbf08984584fb08a34a07505485, type: 3}
+      propertyPath: EnableInvisible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874195571193903490, guid: cdc2acbf08984584fb08a34a07505485, type: 3}
+      propertyPath: EnableStunEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874195571193903490, guid: cdc2acbf08984584fb08a34a07505485, type: 3}
+      propertyPath: EnableThrowStone
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5895124043105711177, guid: cdc2acbf08984584fb08a34a07505485, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
