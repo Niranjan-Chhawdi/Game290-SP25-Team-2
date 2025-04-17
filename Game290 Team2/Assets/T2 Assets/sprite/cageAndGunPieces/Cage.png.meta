@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f62574117b3aaf3498e5e9b80414ca57
+guid: 8f350d536848ffa459e0f419fb0282b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -93,30 +93,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: (64-64) 2in1 cabinet_0
+      name: Cage_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 2
+        y: 26
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4ec270b11c78a44bb95430e8784f540
-      internalID: -1219021742
+      spriteID: 791b9a69785106141ba53c43afad76ab
+      internalID: -439775021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: (64-64) 2in1 cabinet_1
+      name: Cage_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 36
+        y: 27
+        width: 23
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +132,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba65c0d69752d44887801fb2e825a6c
-      internalID: 534699299
+      spriteID: af46d53b67d353842b8c2411286577f2
+      internalID: -130128116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba4acc0fa5e3bc41a3456379ef2408c
+      internalID: 292178111
       vertices: []
       indices: 
       edges: []
@@ -162,8 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      (64-64) 2in1 cabinet_0: -1219021742
-      (64-64) 2in1 cabinet_1: 534699299
+      Cage_0: -439775021
+      Cage_1: -130128116
+      Cage_2: 292178111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

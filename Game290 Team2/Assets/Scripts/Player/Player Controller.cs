@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     internal float normalized;
     public bool canNotBeTraced = false;
     SpriteRenderer spriteRenderer;
-
+    public bool hasKey = false;
+    int gunPieces = 0;
 
 
     private void Awake()
@@ -41,5 +42,15 @@ public class PlayerController : MonoBehaviour
     void ShowPlayer()
     {
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+    }
+
+    public void collectAGunPiece()
+    {
+        gunPieces++;
+        if (gunPieces == 4)
+        {
+            //dialog
+
+        }
     }
 }
