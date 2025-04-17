@@ -21,6 +21,11 @@ public class cagedItem : MonoBehaviour
         {
             if (!playerController.hasKey)
             {
+                //dialog: you need a key to open this cage
+                Debug.Log("You need a key to open this cage");
+            }
+            else if (playerController.keyNum == 0)
+            {
                 //dialog: you have to find the key first
                 Debug.Log("You have to find the key first");
             }

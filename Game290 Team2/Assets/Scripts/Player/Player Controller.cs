@@ -9,8 +9,13 @@ public class PlayerController : MonoBehaviour
     internal float normalized;
     public bool canNotBeTraced = false;
     SpriteRenderer spriteRenderer;
+
     public bool hasKey = false;
+    public int keyNum = 0;
+
+    bool hasGun = false;
     int gunPieces = 0;
+
 
 
     private void Awake()
@@ -32,6 +37,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
+
     }
 
     void HidePlayer()
@@ -47,9 +53,10 @@ public class PlayerController : MonoBehaviour
     public void collectAGunPiece()
     {
         gunPieces++;
-        if (gunPieces == 4)
+        if (gunPieces == 4 && !hasGun)
         {
-            //dialog
+            hasGun = true;
+            Debug.Log("You have collected a gun!");
 
         }
     }

@@ -6,28 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class L2 : MonoBehaviour
 {
+    public PlayerController playerController;
+    public int keyToExit = 1;
     Collider2D doorCollider;
     // Start is called before the first frame update
     void Start()
     {
         doorCollider = GetComponent<Collider2D>();
-
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("123");
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && playerController.keyNum >= keyToExit)
         {
-        	SceneManager.LoadScene("L3 Layer 2");           
+            SceneManager.LoadScene("L3 Layer 2");
         }
 
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+
+
