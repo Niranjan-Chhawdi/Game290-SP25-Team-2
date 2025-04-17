@@ -56,7 +56,7 @@ public class enemyDetector : MonoBehaviour
             timeOutOfSight += Time.deltaTime;
             if (timeOutOfSight % 1 == 0)
             {
-                Debug.Log("Player out of sight for: " + timeOutOfSight);
+                //Debug.Log("Player out of sight for: " + timeOutOfSight);
             }
 
             if (timeOutOfSight >= giveUpTime)

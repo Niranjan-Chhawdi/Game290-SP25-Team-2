@@ -16,10 +16,9 @@ public class TutorialLevel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("123");
         if (collision.gameObject.tag == "Player")
         {
-        	SceneManager.LoadScene("L3 Layer 1");           
+            SceneManager.LoadScene("L3 Layer 1");
         }
 
 
@@ -28,6 +27,6 @@ public class TutorialLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
