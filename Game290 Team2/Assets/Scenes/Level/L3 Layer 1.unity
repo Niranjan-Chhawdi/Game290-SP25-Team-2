@@ -611,19 +611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'Abilities:
+  dialogue: 'New Abilty!
 
     Q - Dash
-
-    W - Invisibility
-
-    E - Stun
-
-    R
-    - Rock Throw
-
-    Use these powers wisely, I collected all the rocks I could,
-    you won''t run out!
 
     (F)'
   textPosition: 1
@@ -76090,15 +76080,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dash: {fileID: 466243164}
+  EnableDash: 1
   DashColdown: 5
   dashText: {fileID: 1455761153}
   invisible: {fileID: 781498874}
+  EnableInvisible: 1
   InvisibleColdown: 5
   invisibleText: {fileID: 2015544021}
   stunEnemy: {fileID: 1730663522}
+  EnableStunEnemy: 1
   StunEnemyColdown: 5
   stunEnemyText: {fileID: 1174546476}
   throwStone: {fileID: 7893986}
+  EnableThrowStone: 1
   ThrowStoneColdown: 5
   throwStoneText: {fileID: 1582158738}
 --- !u!4 &1217584411 stripped
