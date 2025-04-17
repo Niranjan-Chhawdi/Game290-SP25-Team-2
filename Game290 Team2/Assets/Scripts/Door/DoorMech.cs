@@ -8,7 +8,6 @@ public class DoorMech : MonoBehaviour
 {
     bool doorLocked = true;
     public Transform respawnPoint;
-    public GameObject Key;
     PlayerController playerController;
     NavMeshObstacle navMeshObstacle;
 
