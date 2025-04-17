@@ -21,8 +21,6 @@ public class L2 : MonoBehaviour
         {
             SceneManager.LoadScene("L3 Layer 2");
         }
-
-
     }
 }
 
