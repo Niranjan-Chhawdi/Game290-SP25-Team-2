@@ -260,6 +260,127 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3574671483759490480, guid: 3316d2b66d2c2b64a9e2d42bb9402d4c, type: 3}
   m_PrefabInstance: {fileID: 22211984}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &157076499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157076504}
+  - component: {fileID: 157076503}
+  - component: {fileID: 157076502}
+  - component: {fileID: 157076501}
+  - component: {fileID: 157076500}
+  m_Layer: 0
+  m_Name: CS_Controls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &157076500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157076499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da17ecee5bd5054a85c2ce35d7ea801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  dialogue: "Position Mouse to Move \n\nF to Continue"
+  textPosition: 2
+  anim: {fileID: 716246974}
+  popUpText: {fileID: 716246975}
+--- !u!61 &157076501
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157076499}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &157076502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157076499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db6505fdd8263e4db035b0efbefe0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &157076503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157076499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f711140fe1c9b449cd1d41650fb83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &157076504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157076499}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.21874619, w: 0.97578186}
+  m_LocalPosition: {x: -59.81, y: -19.91, z: 0}
+  m_LocalScale: {x: 1.8235813, y: 2.0288408, z: 4.0539517}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -25.271}
 --- !u!1 &267472990
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,8 +414,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'Better
+  dialogue: 'This is what I need!
 
+    (Blue Bar is the Alien Oxygen Bar, Keep it
+    topped up!)
 
     Press F'
   textPosition: 1
@@ -379,7 +502,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.0031543653, w: 0.99999505}
   m_LocalPosition: {x: -47.872, y: -13.105, z: 0}
-  m_LocalScale: {x: 1.0693294, y: 0.99342376, z: 4.0539517}
+  m_LocalScale: {x: 2.1200664, y: 1.8978368, z: 7.7446694}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1112,8 +1235,8 @@ Transform:
   m_GameObject: {fileID: 889674016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.0031543653, w: 0.99999505}
-  m_LocalPosition: {x: -48.07, y: -13.35, z: 0}
-  m_LocalScale: {x: 4.032831, y: 4.0539517, z: 4.0539517}
+  m_LocalPosition: {x: -48.04, y: -13.01, z: 0}
+  m_LocalScale: {x: 8.737935, y: 8.783697, z: 8.783697}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1586,8 +1709,8 @@ Transform:
   m_GameObject: {fileID: 1257963932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.21874619, w: 0.97578186}
-  m_LocalPosition: {x: -54.24, y: -17.06, z: 0}
-  m_LocalScale: {x: 16.079227, y: 4.0539517, z: 4.0539517}
+  m_LocalPosition: {x: -55.74, y: -18.22, z: 0}
+  m_LocalScale: {x: 12.385936, y: 2.0288408, z: 4.0539517}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1674,7 +1797,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: "Where am I... What happened... Where... is... everybody? \n\nPress F "
+  dialogue: 'Where am I... What happened... Where... is... everybody? I need to look
+    around.
+
+
+    Press F '
   textPosition: 2
   anim: {fileID: 716246974}
   popUpText: {fileID: 716246975}
@@ -6834,7 +6961,7 @@ Transform:
   m_GameObject: {fileID: 1522635472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.863983, y: -13.10796, z: 0}
+  m_LocalPosition: {x: -47.45, y: -12.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18644,6 +18771,7 @@ SceneRoots:
   - {fileID: 1522635476}
   - {fileID: 1917871892}
   - {fileID: 1257963933}
+  - {fileID: 157076504}
   - {fileID: 889674021}
   - {fileID: 267472995}
   - {fileID: 3934210395112113482}

@@ -5056,6 +5056,7 @@ Transform:
   - {fileID: 1182319537}
   - {fileID: 1988883547}
   - {fileID: 1924267997}
+  - {fileID: 1736120534}
   - {fileID: 1666926915}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5221,11 +5222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.004162
+      value: -18.00021
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.74871
+      value: -3.74872
       objectReference: {fileID: 0}
     - target: {fileID: 5808914302169549231, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5597,7 +5598,7 @@ Transform:
   m_GameObject: {fileID: 1182319532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.0000489304, w: 1}
-  m_LocalPosition: {x: 9.276761, y: -31.590876, z: 0.066522114}
+  m_LocalPosition: {x: 10.06, y: -18.47, z: 0.066522114}
   m_LocalScale: {x: 1.4123462, y: 3.3066669, z: 3.695623}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7278,8 +7279,8 @@ Transform:
   m_GameObject: {fileID: 1666926914}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0034942422, w: 0.999994}
-  m_LocalPosition: {x: 50.33, y: -12.49, z: 0.066522114}
-  m_LocalScale: {x: 2.4873185, y: 3.3066669, z: 3.695623}
+  m_LocalPosition: {x: 34.18, y: -10.32, z: 0.066522114}
+  m_LocalScale: {x: 8.0521965, y: 3.3066669, z: 3.695623}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1011711397}
@@ -10767,6 +10768,131 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1736120533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736120534}
+  - component: {fileID: 1736120538}
+  - component: {fileID: 1736120537}
+  - component: {fileID: 1736120536}
+  - component: {fileID: 1736120535}
+  m_Layer: 0
+  m_Name: CS_Booklet (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1736120534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736120533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.0034942422, w: 0.999994}
+  m_LocalPosition: {x: -3.78, y: -0.68, z: 0.066522114}
+  m_LocalScale: {x: 1.9312422, y: 1.2386112, z: 3.695623}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1011711397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.4}
+--- !u!114 &1736120535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736120533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da17ecee5bd5054a85c2ce35d7ea801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  dialogue: 'They took us deep into a laboratory, we need help!! One of us escaped...
+    find him!
+
+
+    (F)'
+  textPosition: 1
+  anim: {fileID: 1598383286}
+  popUpText: {fileID: 1598383287}
+--- !u!61 &1736120536
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736120533}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1736120537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736120533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db6505fdd8263e4db035b0efbefe0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1736120538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736120533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f711140fe1c9b449cd1d41650fb83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1774249067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4513676079681443456, guid: 7ed646559845997428989484635642b1, type: 3}
@@ -11169,7 +11295,7 @@ GameObject:
   - component: {fileID: 1924267999}
   - component: {fileID: 1924267998}
   m_Layer: 0
-  m_Name: 'CS_locked '
+  m_Name: CS_Alien Find
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11184,8 +11310,8 @@ Transform:
   m_GameObject: {fileID: 1924267996}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0034942422, w: 0.999994}
-  m_LocalPosition: {x: 39.07, y: 16.13, z: 0.066522114}
-  m_LocalScale: {x: 14.123463, y: 3.3066669, z: 3.695623}
+  m_LocalPosition: {x: 27.2, y: 11.9, z: 0.066522114}
+  m_LocalScale: {x: 1.9312422, y: 3.3066669, z: 3.695623}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1011711397}
@@ -11203,7 +11329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'Need a key!
+  dialogue: 'Thank you Thank you! Take my powers Pip, you will need them...
 
 
     (F)'
@@ -13115,7 +13241,7 @@ Transform:
   m_GameObject: {fileID: 1988883542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.00085529475, w: 0.9999997}
-  m_LocalPosition: {x: -6.103239, y: -5.6308765, z: 0.066522114}
+  m_LocalPosition: {x: -6.75, y: -6.74, z: 0.066522114}
   m_LocalScale: {x: 3.531572, y: 3.306667, z: 3.695623}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88614,11 +88740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704456939260471496, guid: a63bd025c10bc2741b52922701b5b01e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.31
+      value: -5.03
       objectReference: {fileID: 0}
     - target: {fileID: 7704456939260471496, guid: a63bd025c10bc2741b52922701b5b01e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.72
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 7704456939260471496, guid: a63bd025c10bc2741b52922701b5b01e, type: 3}
       propertyPath: m_LocalPosition.z
