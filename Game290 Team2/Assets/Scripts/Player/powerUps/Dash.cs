@@ -16,7 +16,7 @@ public class Dash : MonoBehaviour
         agent = GameObject.Find("Player").GetComponent<NavMeshAgent>();
         if (agent == null)
         {
-            Debug.LogError("NavMeshAgent not found on Player");
+            // Debug.LogError("NavMeshAgent not found on Player");
         }
     }
 

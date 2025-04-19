@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
             ShowPlayer();
         }
 
+        if (keyNum > 0)
+        {
+            hasKey = true;
+        }
 
 
     }

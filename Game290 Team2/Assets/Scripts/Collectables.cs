@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Collectables : MonoBehaviour
@@ -11,7 +12,6 @@ public class Collectables : MonoBehaviour
     public bool isKey = false;
     public bool isFriend = false;
     public string AbilityName = "None";
-
 
     private void Start()
     {
