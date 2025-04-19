@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public Image healthBar;
     private Vector3 startPosition;
     NavMeshAgent agent;
+    Rigidbody2D rb;
     bool isDead = false;
     public Color hurtColor = new Color(1, 0.5f, 0.5f);
 
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
         maxHealth = health;
         startPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody2D>();
         playerController = GetComponent<PlayerController>();
     }
 
@@ -78,7 +79,9 @@ public class PlayerHealth : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, 90);
         spriteRenderer.color = hurtColor;
-        agent.isStopped = true;
+
+        //set is to static
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         isWaitingToRespawn = true;
         respawnTimer = 3f;
     }
@@ -86,7 +89,9 @@ public class PlayerHealth : MonoBehaviour
     void Respawn()
     {
         isDead = false;
-        agent.isStopped = false;
+
+        //set is to dynamic
+        rb.constraints = RigidbodyConstraints2D.None;
         transform.position = startPosition;
         transform.rotation = Quaternion.Euler(0, 0, 0);
         spriteRenderer.color = Color.white;

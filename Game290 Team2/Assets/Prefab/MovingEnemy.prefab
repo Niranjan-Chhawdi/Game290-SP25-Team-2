@@ -290,7 +290,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5533544123418493009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52aa7433b8ecafc458d444f053ff8088, type: 3}
+  m_Script: {fileID: 11500000, guid: 274449b687001de489fa029e99bb03fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkingUp: sci-walkingUp
@@ -633,6 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrived: 0
+  remainingDistance: 0.2
   currentMethod: 0
 --- !u!1 &8546655168529247819
 GameObject:

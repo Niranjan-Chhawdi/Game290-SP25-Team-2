@@ -7,7 +7,7 @@ public enum PlayerState
 {
     walking, usingAbility, dead
 }
-public class PlayerAnimaation : MonoBehaviour
+public class AgentAnimation : MonoBehaviour
 {
     PlayerState playerState;
     Animator animator;

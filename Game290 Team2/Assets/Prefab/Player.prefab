@@ -535,6 +535,8 @@ MonoBehaviour:
   canNotBeTraced: 0
   hasKey: 0
   keyNum: 0
+  hasGun: 0
+  gunPieces: 0
 --- !u!50 &6550584809798617495
 Rigidbody2D:
   serializedVersion: 4
@@ -671,7 +673,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860872691205585408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5299d71d053df2c47952e73611d1fde6, type: 3}
+  m_Script: {fileID: 11500000, guid: 634909b71f7a2b7499cdd970b56c4cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   noiesyRange: {fileID: 7626340555481235585}
@@ -705,7 +707,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860872691205585408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52aa7433b8ecafc458d444f053ff8088, type: 3}
+  m_Script: {fileID: 11500000, guid: 274449b687001de489fa029e99bb03fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkingUp: mainChar-walkingUp
