@@ -441,6 +441,7 @@ GameObject:
   - component: {fileID: 4263859030523101953}
   - component: {fileID: 2729006929555151233}
   - component: {fileID: 2948194540319767175}
+  - component: {fileID: 7115314594928007304}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -613,7 +614,8 @@ MonoBehaviour:
   health: 100
   maxHealth: 0
   maxOxygen: 100
-  depletionRate: 3
+  depletionRate: 1.5
+  currentOxygen: 0
   hurtColor: {r: 1, g: 0.5, b: 0.5, a: 1}
 --- !u!195 &8805907566122357741
 NavMeshAgent:
@@ -664,7 +666,7 @@ MonoBehaviour:
   noiesyIndicator: {fileID: 7626340555481235585}
   isStraight: 1
   minSpeed: 2
-  maxSpeed: 5
+  maxSpeed: 4
 --- !u!95 &2729006929555151233
 Animator:
   serializedVersion: 5
@@ -703,3 +705,15 @@ MonoBehaviour:
   walkingLeft: mainChar-walkingLeft
   walkingRight: mainChar-walkingRight
   idle: mainChar-idle
+--- !u!114 &7115314594928007304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860872691205585408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d13efa9b0ee624cb6c9a2e82b18a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

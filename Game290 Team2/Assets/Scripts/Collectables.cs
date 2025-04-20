@@ -9,16 +9,15 @@ public class Collectables : MonoBehaviour
     public bool isKey = false;
     public bool isFriend = false;
     private string playerTag = "Player";
-    public GameObject player;
+    GameObject player;
     PlayerController playerController;
     PlayerHealth playerHealth;
-    public AbilityManager abilityManager;
+    public PowerUpData powerUpData;
     public string AbilityName = "None";
 
     private void Start()
     {
         player = GameObject.Find("Player");
-
         playerController = player.GetComponent<PlayerController>();
         playerHealth = player.GetComponent<PlayerHealth>();
     }
@@ -48,19 +47,19 @@ public class Collectables : MonoBehaviour
     {
         if (ability == "dash")
         {
-            abilityManager.EnableDash = true;
+            powerUpData.EnableDash = true;
         }
         else if (ability == "invisible")
         {
-            abilityManager.EnableInvisible = true;
+            powerUpData.EnableInvisible = true;
         }
         else if (ability == "stunEnemy")
         {
-            abilityManager.EnableStunEnemy = true;
+            powerUpData.EnableStunEnemy = true;
         }
         else if (ability == "throwStone")
         {
-            abilityManager.EnableThrowStone = true;
+            powerUpData.EnableThrowStone = true;
         }
         else
         {

@@ -5,11 +5,12 @@ using UnityEngine;
 public class GodMode : MonoBehaviour
 {
     PlayerHealth playerHealth;
-    public GameObject indicator;
+    GameObject indicator;
     bool isGodModeActive = false;
     void Awake()
     {
         playerHealth = GetComponent<PlayerHealth>();
+        indicator = GameObject.Find("GodModeIndicator");
     }
     void Update()
     {

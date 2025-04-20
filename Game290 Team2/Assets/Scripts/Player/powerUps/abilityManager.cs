@@ -7,24 +7,24 @@ using UnityEngine.UI;
 public class AbilityManager : MonoBehaviour
 {
     RectTransform rectTransform;
-
+    public PowerUpData powerUpData;
     Dash dash;
-    public bool EnableDash = true;
+
     public float DashColdown = 5f;
     public GameObject dashImage;
 
     Invisible invisible;
-    public bool EnableInvisible = true;
+
     public float InvisibleColdown = 5f;
     public GameObject invisibleImage;
 
     StunEnemy stunEnemy;
-    public bool EnableStunEnemy = true;
+
     public float StunEnemyColdown = 5f;
     public GameObject stunEnemyImage;
 
     ThrowStone throwStone;
-    public bool EnableThrowStone = true;
+
     public float ThrowStoneColdown = 5f;
     public GameObject throwStoneImage;
 
@@ -56,7 +56,7 @@ public class AbilityManager : MonoBehaviour
 
     void disableOtherAbilities()
     {
-        if (!EnableDash)
+        if (!powerUpData.EnableDash)
         {
             dashImage.SetActive(false);
         }
@@ -64,7 +64,7 @@ public class AbilityManager : MonoBehaviour
         {
             dashImage.SetActive(true);
         }
-        if (!EnableInvisible)
+        if (!powerUpData.EnableInvisible)
         {
             invisibleImage.SetActive(false);
         }
@@ -72,7 +72,7 @@ public class AbilityManager : MonoBehaviour
         {
             invisibleImage.SetActive(true);
         }
-        if (!EnableStunEnemy)
+        if (!powerUpData.EnableStunEnemy)
         {
             stunEnemyImage.SetActive(false);
         }
@@ -80,7 +80,7 @@ public class AbilityManager : MonoBehaviour
         {
             stunEnemyImage.SetActive(true);
         }
-        if (!EnableThrowStone)
+        if (!powerUpData.EnableThrowStone)
         {
             throwStoneImage.SetActive(false);
         }
@@ -92,22 +92,22 @@ public class AbilityManager : MonoBehaviour
 
     void checkToDOAbility()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && Dashtimer <= 0f && EnableDash)
+        if (Input.GetKeyDown(KeyCode.Q) && Dashtimer <= 0f && powerUpData.EnableDash)
         {
             dash.DoDash();
             Dashtimer = DashColdown;
         }
-        if (Input.GetKeyDown(KeyCode.W) && Invisibletimer <= 0f && EnableInvisible)
+        if (Input.GetKeyDown(KeyCode.W) && Invisibletimer <= 0f && powerUpData.EnableInvisible)
         {
             invisible.DoInvisible();
             Invisibletimer = InvisibleColdown;
         }
-        if (Input.GetKeyDown(KeyCode.E) && StunEnemytimer <= 0f && EnableStunEnemy)
+        if (Input.GetKeyDown(KeyCode.E) && StunEnemytimer <= 0f && powerUpData.EnableStunEnemy)
         {
             stunEnemy.doStun();
             StunEnemytimer = StunEnemyColdown;
         }
-        if (Input.GetKeyDown(KeyCode.R) && ThrowStonetimer <= 0f && EnableThrowStone)
+        if (Input.GetKeyDown(KeyCode.R) && ThrowStonetimer <= 0f && powerUpData.EnableThrowStone)
         {
             throwStone.doThrow();
             ThrowStonetimer = ThrowStoneColdown;
