@@ -6,12 +6,22 @@ public class PlayerHealth : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     PlayerController playerController;
+
+
+
     public float health;
     public float maxHealth;
-    public Image healthBar;
+    Image HP;
+
+    Image Gas;
+    public float maxOxygen = 100f;
+    public float depletionRate = 5f;
+    public float currentOxygen;
+
+
     private Vector3 startPosition;
     NavMeshAgent agent;
-    Rigidbody2D rb;
+
     bool isDead = false;
     public Color hurtColor = new Color(1, 0.5f, 0.5f);
 
@@ -19,18 +29,26 @@ public class PlayerHealth : MonoBehaviour
     private bool isPlayingHurtAnimation = false;
     private float respawnTimer = 0f;
     private bool isWaitingToRespawn = false;
+
     void Awake()
     {
+        agent = GetComponent<NavMeshAgent>();
+        HP = GameObject.Find("HP").GetComponent<Image>();
         maxHealth = health;
+
+        currentOxygen = maxOxygen;
+        Gas = GameObject.Find("Gas").GetComponent<Image>();
+
         startPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
+
         playerController = GetComponent<PlayerController>();
     }
 
     void Update()
     {
-        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+        DepleteOxygen();
+        HP.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
 
         if (health <= 0 && !isDead)
         {
@@ -56,6 +74,20 @@ public class PlayerHealth : MonoBehaviour
                 isWaitingToRespawn = false;
             }
         }
+
+        if (isDead)
+        {
+            agent.velocity = Vector3.zero;
+            agent.isStopped = true;
+        }
+    }
+
+    public void refillAll()
+    {
+        health = maxHealth;
+        currentOxygen = maxOxygen;
+        HP.fillAmount = health / maxHealth;
+        Gas.fillAmount = currentOxygen / maxOxygen;
     }
 
     public void takeDamge(float damage)
@@ -79,9 +111,6 @@ public class PlayerHealth : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, 90);
         spriteRenderer.color = hurtColor;
-
-        //set is to static
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         isWaitingToRespawn = true;
         respawnTimer = 3f;
     }
@@ -91,7 +120,7 @@ public class PlayerHealth : MonoBehaviour
         isDead = false;
 
         //set is to dynamic
-        rb.constraints = RigidbodyConstraints2D.None;
+        agent.isStopped = false;
         transform.position = startPosition;
         transform.rotation = Quaternion.Euler(0, 0, 0);
         spriteRenderer.color = Color.white;
@@ -99,7 +128,38 @@ public class PlayerHealth : MonoBehaviour
         playerController.keyNum = 0;
         playerController.gunPieces = 0;
         playerController.hasGun = false;
+
         health = maxHealth;
+        currentOxygen = maxOxygen;
         Debug.Log("Player Respawned!");
     }
+
+    private void DepleteOxygen()
+    {
+        currentOxygen -= depletionRate * Time.deltaTime;
+        if (currentOxygen < 0) currentOxygen = 0;
+
+        Gas.fillAmount = currentOxygen / maxOxygen;
+
+        if (currentOxygen == 0)
+        {
+            die();
+        }
+    }
+    public void RefillOxygen(float amount)
+    {
+        currentOxygen += amount;
+        if (currentOxygen > maxOxygen) currentOxygen = maxOxygen;
+
+        Gas.fillAmount = currentOxygen / maxOxygen;
+    }
+    public void RefillHealth(float amount)
+    {
+        health += amount;
+        if (health > maxHealth) health = maxHealth;
+
+        HP.fillAmount = health / maxHealth;
+    }
+
+
 }

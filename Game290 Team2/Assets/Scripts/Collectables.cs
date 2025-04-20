@@ -6,21 +6,21 @@ using UnityEngine;
 public class Collectables : MonoBehaviour
 {
     [SerializeField]
-    private string playerTag = "Player";
-    PlayerController playerController;
-    public AbilityManager abilityManager;
     public bool isKey = false;
     public bool isFriend = false;
+    private string playerTag = "Player";
+    public GameObject player;
+    PlayerController playerController;
+    PlayerHealth playerHealth;
+    public AbilityManager abilityManager;
     public string AbilityName = "None";
 
     private void Start()
     {
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
-        if (playerController == null)
-        {
-            Debug.LogError("PlayerController not found on Player GameObject.");
-        }
+        player = GameObject.Find("Player");
 
+        playerController = player.GetComponent<PlayerController>();
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
 
@@ -38,10 +38,10 @@ public class Collectables : MonoBehaviour
             if (isFriend)
             {
                 checkAbility(AbilityName);
+                playerHealth.refillAll();
             }
             Destroy(gameObject);
         }
-
     }
 
     void checkAbility(string ability)

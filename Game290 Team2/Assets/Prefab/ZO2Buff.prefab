@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4755262306294870939}
   - component: {fileID: 6374788131070388922}
   - component: {fileID: 518478361328972868}
-  - component: {fileID: 8091989279382796201}
+  - component: {fileID: 1443396878880942086}
   m_Layer: 0
   m_Name: ZO2Buff
   m_TagString: Untagged
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0070049763}
+  m_Offset: {x: 0, y: -0.006095886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,9 +129,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.38697}
+  m_Size: {x: 1, y: 1.3388977}
   m_EdgeRadius: 0
---- !u!114 &8091989279382796201
+--- !u!114 &1443396878880942086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 331883506142971796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e99db6e3b3120842a5312d991d2badd, type: 3}
+  m_Script: {fileID: 11500000, guid: c477e3585177de84c9455207100f5c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupEffect: {fileID: 11400000, guid: 055a4e46c3eca444d8ccc5effeda26dc, type: 2}
+  oxygenAmount: 40
+  HealthAmount: 0
