@@ -52,6 +52,7 @@ public class AbilityManager : MonoBehaviour
     {
         checkToDOAbility();
         disableOtherAbilities();
+        handleTransparency();
     }
 
     void disableOtherAbilities()
@@ -160,4 +161,59 @@ public class AbilityManager : MonoBehaviour
             throwStoneText.text = Mathf.Ceil(ThrowStonetimer).ToString();
         }
     }
+
+
+    void handleTransparency()
+    {
+        //if the timer is less than 0.5f, set the alpha to 0.5f
+        if (Dashtimer > 0.1f)
+        {
+            Color color = dashImage.GetComponent<Image>().color;
+            color.a = 0.3f;
+            dashImage.GetComponent<Image>().color = color;
+        }
+        else
+        {
+            Color color = dashImage.GetComponent<Image>().color;
+            color.a = 1f;
+            dashImage.GetComponent<Image>().color = color;
+        }
+        if (Invisibletimer > 0.1f)
+        {
+            Color color = invisibleImage.GetComponent<Image>().color;
+            color.a = 0.3f;
+            invisibleImage.GetComponent<Image>().color = color;
+        }
+        else
+        {
+            Color color = invisibleImage.GetComponent<Image>().color;
+            color.a = 1f;
+            invisibleImage.GetComponent<Image>().color = color;
+        }
+        if (StunEnemytimer > 0.1f)
+        {
+            Color color = stunEnemyImage.GetComponent<Image>().color;
+            color.a = 0.3f;
+            stunEnemyImage.GetComponent<Image>().color = color;
+        }
+        else
+        {
+            Color color = stunEnemyImage.GetComponent<Image>().color;
+            color.a = 1f;
+            stunEnemyImage.GetComponent<Image>().color = color;
+        }
+        if (ThrowStonetimer > 0.1f)
+        {
+            Color color = throwStoneImage.GetComponent<Image>().color;
+            color.a = 0.3f;
+            throwStoneImage.GetComponent<Image>().color = color;
+        }
+        else
+        {
+            Color color = throwStoneImage.GetComponent<Image>().color;
+            color.a = 1f;
+            throwStoneImage.GetComponent<Image>().color = color;
+        }
+    }
+
 }
