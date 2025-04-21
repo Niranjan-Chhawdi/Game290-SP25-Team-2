@@ -8,8 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     PlayerController playerController;
-
-
+    public bool GODMODE = false;
 
     public float health;
     public float maxHealth;
@@ -49,6 +48,12 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+
+        if (GODMODE)
+        {
+            health = maxHealth;
+            currentOxygen = maxOxygen;
+        }
         DepleteOxygen();
         HP.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
 

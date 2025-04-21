@@ -12,6 +12,7 @@ public class BossExecution : MonoBehaviour
     Animator animatorPlayer;
     PlayerController playerController;
     NavMeshAgent agent;
+    PlayerHealth playerHealth;
 
 
     public Animator animatorBoss;
@@ -24,6 +25,7 @@ public class BossExecution : MonoBehaviour
         animatorPlayer = GetComponent<Animator>();
         playerNavMesh = GetComponent<PlayerNavMesh>();
         playerAnimation = GetComponent<AgentAnimation>();
+        playerHealth = GetComponent<PlayerHealth>();
         agent = GetComponent<NavMeshAgent>();
         playerController = GetComponent<PlayerController>();
 
@@ -56,8 +58,7 @@ public class BossExecution : MonoBehaviour
         }
         if (goToDest2)
         {
-            playerController.canNotBeTraced = true;
-            playerController.isHiding = true;
+            playerHealth.GODMODE = true;
             agent.enabled = false;
             transform.position = Vector2.MoveTowards(transform.position, dest2.position, 02f * Time.deltaTime);
         }

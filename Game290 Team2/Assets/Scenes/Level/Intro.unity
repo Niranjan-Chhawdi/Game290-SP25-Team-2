@@ -1702,7 +1702,7 @@ MonoBehaviour:
 
 
     Press F '
-  textPosition: 2
+  textPosition: 1
   anim: {fileID: 716246974}
   popUpText: {fileID: 716246975}
 --- !u!1001 &1378594711

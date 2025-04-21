@@ -4206,11 +4206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.215393
+      value: -19.205555
       objectReference: {fileID: 0}
     - target: {fileID: 4984617529013100480, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.19403
+      value: -8.194039
       objectReference: {fileID: 0}
     - target: {fileID: 5808914302169549231, guid: 9b7ef67368580354bb658a50fa174fc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4502,7 +4502,7 @@ MonoBehaviour:
 
 
     (F)'
-  textPosition: 2
+  textPosition: 1
   anim: {fileID: 1598383286}
   popUpText: {fileID: 1598383287}
 --- !u!61 &1182319534
@@ -5321,7 +5321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'There is my ship, seems still functioning. Let me put it into my pocket
+  dialogue: 'There is my ship, it seems still functional. Let me put it into my pocket
 
 
     (F)'
@@ -6067,7 +6067,7 @@ Transform:
   m_GameObject: {fileID: 1622739077}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 1.5, z: 0}
+  m_LocalPosition: {x: -8, y: 0.54, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6083,7 +6083,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 2, y: 1, z: 0.1}
+  m_Extents: {x: 2, y: 2, z: 0.1}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1

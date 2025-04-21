@@ -16,8 +16,7 @@ public class GodMode : MonoBehaviour
     {
         if (isGodModeActive)
         {
-            playerHealth.health = playerHealth.maxHealth;
-            playerHealth.currentOxygen = playerHealth.maxOxygen;
+            playerHealth.GODMODE = true;
             indicator.SetActive(true);
         }
         else

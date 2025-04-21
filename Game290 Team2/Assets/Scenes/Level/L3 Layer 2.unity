@@ -618,7 +618,7 @@ MonoBehaviour:
     Aliens Prohibited
 
     (F)'
-  textPosition: 0
+  textPosition: 1
   anim: {fileID: 647507029}
   popUpText: {fileID: 647507030}
 --- !u!61 &81010941
@@ -890,12 +890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'PIP!! Take these.
-
-    (Bag of Rocks)
-
-
-    (F)'
+  dialogue: "Take my SUPERPOWER! \n(Press E to stun enemies) \n\n(F)"
   textPosition: 1
   anim: {fileID: 647507029}
   popUpText: {fileID: 647507030}
@@ -49902,7 +49897,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'Your safe now... take my ability.
+  dialogue: 'PIP!! Take these.
+
+    (Bag of Rocks)
 
 
     (F)'
