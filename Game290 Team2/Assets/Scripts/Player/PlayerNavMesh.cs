@@ -10,6 +10,8 @@ public class PlayerNavMesh : MonoBehaviour
     private NavMeshAgent agent;
     public Transform noiesyIndicator;
     public bool isStraight = false;
+    bool starting = false;
+
 
     public float minSpeed = 2f;
     public float maxSpeed = 5f;
@@ -25,15 +27,21 @@ public class PlayerNavMesh : MonoBehaviour
         }
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
-        agent.SetDestination(mouseIndicator.transform.position);
+
     }
 
     void Update()
     {
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && !starting)
+        {
+            starting = true;
+            agent.SetDestination(mouseIndicator.transform.position);
+        }
+
         agent.speed = GetSpeed();
         updateIndicatorPosition();
 
-        if (isStraight)
+        if (isStraight && starting)
         {
             Vector2 currentPos = transform.position;
             Vector2 targetPos = mouseIndicator.transform.position;
@@ -56,13 +64,8 @@ public class PlayerNavMesh : MonoBehaviour
                 agent.ResetPath();
             }
         }
-        else
-        {
-            if (agent.destination != mouseIndicator.transform.position)
-            {
-                agent.SetDestination(mouseIndicator.transform.position);
-            }
-        }
+
+
     }
 
     float GetSpeed()
