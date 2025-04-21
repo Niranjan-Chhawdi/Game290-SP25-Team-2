@@ -86,6 +86,7 @@ public class PlayerHealth : MonoBehaviour
         {
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
+
         }
     }
 
@@ -115,7 +116,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-
+        agent.isStopped = true;
         transform.rotation = Quaternion.Euler(0, 0, 90);
         spriteRenderer.color = hurtColor;
         isWaitingToRespawn = true;

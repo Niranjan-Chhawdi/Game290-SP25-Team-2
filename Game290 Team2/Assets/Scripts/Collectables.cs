@@ -20,7 +20,17 @@ public class Collectables : MonoBehaviour
         player = GameObject.Find("Player");
         playerController = player.GetComponent<PlayerController>();
         playerHealth = player.GetComponent<PlayerHealth>();
+
+        if
+        ((AbilityName == "dash" && powerUpData.EnableDash) ||
+         (AbilityName == "invisible" && powerUpData.EnableInvisible) ||
+         (AbilityName == "stunEnemy" && powerUpData.EnableStunEnemy) ||
+         (AbilityName == "throwStone" && powerUpData.EnableThrowStone))
+        {
+            Destroy(gameObject);
+        }
     }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)

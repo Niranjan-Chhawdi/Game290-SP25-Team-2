@@ -7,25 +7,30 @@ public class GodMode : MonoBehaviour
     PlayerHealth playerHealth;
     GameObject indicator;
     bool isGodModeActive = false;
+
     void Awake()
     {
         playerHealth = GetComponent<PlayerHealth>();
         indicator = GameObject.Find("GodModeIndicator");
     }
+
     void Update()
     {
         if (isGodModeActive)
         {
             playerHealth.GODMODE = true;
             indicator.SetActive(true);
+
         }
         else
         {
+            playerHealth.GODMODE = false;
             indicator.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
+
             isGodModeActive = !isGodModeActive;
             if (isGodModeActive)
             {
@@ -33,8 +38,10 @@ public class GodMode : MonoBehaviour
             }
             else
             {
+
                 Debug.Log("God Mode Deactivated");
             }
         }
+
     }
 }
