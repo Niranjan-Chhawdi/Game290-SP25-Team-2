@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -117,21 +119,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Respawn()
     {
-        isDead = false;
-
-        //set is to dynamic
-        agent.isStopped = false;
-        transform.position = startPosition;
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-        spriteRenderer.color = Color.white;
-        playerController.hasKey = false;
-        playerController.keyNum = 0;
-        playerController.gunPieces = 0;
-        playerController.hasGun = false;
-
-        health = maxHealth;
-        currentOxygen = maxOxygen;
-        Debug.Log("Player Respawned!");
+        //reload the scene or reset the player position
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void DepleteOxygen()

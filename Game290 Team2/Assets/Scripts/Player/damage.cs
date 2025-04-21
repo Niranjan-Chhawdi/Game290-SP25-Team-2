@@ -8,6 +8,7 @@ public class Damage : MonoBehaviour
 
     private PlayerHealth phealth;
     public float damage = 20f;
+    public bool usingCollider = false;
     GameObject player;
     public float damageRadius = 1f;
     float timeOutOfSight = 0f;
@@ -23,6 +24,10 @@ public class Damage : MonoBehaviour
             return;
         }
         enemyDetector = GetComponentInParent<enemyDetector>();
+        if (usingCollider)
+        {
+            Collider2D collider = GetComponent<Collider2D>();
+        }
 
     }
 
@@ -44,6 +49,22 @@ public class Damage : MonoBehaviour
                 {
                     enemyDetector.timeOutOfSight = 0f; // Reset the timer when the player is in sight
                 }
+            }
+            else
+            {
+                Debug.LogError("PlayerHealth component not found on player object.");
+                return;
+            }
+        }
+    }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && usingCollider)
+        {
+            if (phealth != null)
+            {
+                phealth.takeDamge(damage * Time.deltaTime);// Apply damage over time
+                //Debug.Log("Player health: " + phealth.health);
             }
             else
             {
