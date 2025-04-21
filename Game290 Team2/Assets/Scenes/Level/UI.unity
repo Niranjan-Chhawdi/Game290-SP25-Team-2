@@ -662,8 +662,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1561970494}
   m_HandleRect: {fileID: 1561970493}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6470594
+  m_Value: 1.0000014
+  m_Size: 0.6470985
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1576,7 +1576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006713867, y: -213.50008}
+  m_AnchoredPosition: {x: 0.0006713867, y: -213.50075}
   m_SizeDelta: {x: 564, y: 1210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563613331
@@ -21847,18 +21847,6 @@ PolygonCollider2D:
       - {x: 50.285675, y: -20.520668}
       - {x: 47.56479, y: 34.417168}
   m_UseDelaunayMesh: 0
---- !u!114 &115343750102789531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5533544123332300070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e39f6090724e4a4a8aadeb042afa2bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!223 &450853674421432895
 Canvas:
   m_ObjectHideFlags: 0
@@ -22233,28 +22221,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 882577397899281481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &3131587791688273532
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5533544123332300070}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3
-  m_Acceleration: 6
-  avoidancePriority: 0
-  m_AngularSpeed: 0
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 0
 --- !u!4 &3199644972692496504
 Transform:
   m_ObjectHideFlags: 0
@@ -22275,33 +22241,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4513676079681443456, guid: 7ed646559845997428989484635642b1, type: 3}
   m_PrefabInstance: {fileID: 1967011831962070921}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4208441518928434343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8069638743100993195}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ea3ffd0107fc04a959dfd00ff77bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrived: 0
-  remainingDistance: 0.2
-  currentMethod: 0
---- !u!114 &5039358696028106478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5533544123332300070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52aa7433b8ecafc458d444f053ff8088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5533544123332300070
 GameObject:
   m_ObjectHideFlags: 0
@@ -22312,11 +22251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8084902790830736184}
   - component: {fileID: 2518632515469981277}
-  - component: {fileID: 3131587791688273532}
-  - component: {fileID: 115343750102789531}
   - component: {fileID: 2486365162266444628}
-  - component: {fileID: 5039358696028106478}
-  - component: {fileID: 7619992951749604667}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Enemy
@@ -22558,19 +22493,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7619992951749604667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5533544123332300070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e5e48468a2fe7c4b9a67d6c21c5cca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseTime: 2
 --- !u!4 &7936963806030328393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1950123054233014292, guid: d477eac55afb18047b65f46fcba3f297, type: 3}
@@ -22585,7 +22507,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882577397899281481}
-  - component: {fileID: 4208441518928434343}
   m_Layer: 0
   m_Name: MovingEnemy
   m_TagString: Untagged
