@@ -52,7 +52,7 @@ public class Collectables : MonoBehaviour
             {
                 checkAbility(AbilityName);
                 playerHealth.refillAll();
-                audioManager.PlaykeyCollectSound(); 
+                audioManager.PlayReviveSound(); 
             }
             Destroy(gameObject);
         }

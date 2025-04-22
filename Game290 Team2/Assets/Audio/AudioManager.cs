@@ -28,6 +28,13 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip Damage;
 
+    public AudioClip friendRevive;
+
+    public void PlayReviveSound(){
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(friendRevive);
+    }
+
     public void PlayDamageSound(){
         SFXSource.volume = 0.1f;
         SFXSource.PlayOneShot(Damage);

@@ -33,6 +33,7 @@ public class cagedItem : MonoBehaviour
             {
                 if (!collected)
                 {
+                    
                     collected = true;
                     Destroy(collectable);
                     playerController.collectAGunPiece();
