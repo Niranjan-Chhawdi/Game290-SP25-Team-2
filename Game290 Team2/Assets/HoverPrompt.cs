@@ -7,6 +7,8 @@ public class HoverPrompt : MonoBehaviour
 {
     public TMP_Text promptText; 
     private bool isNearRock = false;
+  
+
 
     private void Start()
     {
