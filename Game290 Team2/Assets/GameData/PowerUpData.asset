@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ea175626919074dbebbb6dfed25ea3, type: 3}
   m_Name: PowerUpData
   m_EditorClassIdentifier: 
-  EnableDash: 1
+  EnableDash: 0
   EnableInvisible: 0
   EnableStunEnemy: 0
   EnableThrowStone: 0
