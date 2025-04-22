@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Recover : MonoBehaviour
 {
+    private AudioManager audioManager;
     GameObject player;
     PlayerHealth playerHealth;
     public float oxygenAmount = 0f; // Amount of oxygen to recover
@@ -12,6 +13,7 @@ public class Recover : MonoBehaviour
     {
         player = GameObject.Find("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +22,7 @@ public class Recover : MonoBehaviour
             playerHealth.RefillOxygen(oxygenAmount);
             playerHealth.RefillHealth(HealthAmount);
             Destroy(gameObject);
+            audioManager.PlayOXrefillSound();
         }
     }
 }

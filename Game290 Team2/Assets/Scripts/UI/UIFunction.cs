@@ -1,16 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIFunction : MonoBehaviour
 {
+    private AudioManager audioManager;
     public CanvasGroup PauseMenu;
     public String startSceneName = "Intro";
     void Start()
     {
         unPauseGame();
+        audioManager = FindObjectOfType<AudioManager>();
     }
     public void startGame()
     {
@@ -31,10 +31,12 @@ public class UIFunction : MonoBehaviour
             {
                 if (PauseMenu.alpha == 0)
                 {
+                    audioManager.PlayPauseSound();
                     pauseGame();
                 }
                 else
                 {
+                    audioManager.PlayUnPauseSound();
                     unPauseGame();
                 }
             }

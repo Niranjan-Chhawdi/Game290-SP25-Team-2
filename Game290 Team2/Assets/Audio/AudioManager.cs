@@ -14,6 +14,50 @@ public class AudioManager : MonoBehaviour
     public AudioClip Hover;
     public AudioClip Click;
     public AudioClip NoClick;
+    public AudioClip Pause;
+
+    public AudioClip UnPause;
+
+    public AudioClip OXrefill;
+
+    public AudioClip hideGrass;
+
+    public AudioClip buttonClicked;
+
+    public AudioClip keyCollect;
+
+    public AudioClip Damage;
+
+    public void PlayDamageSound(){
+        SFXSource.volume = 0.1f;
+        SFXSource.PlayOneShot(Damage);
+    }
+
+    public void PlaykeyCollectSound()
+    {
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(keyCollect);
+    }
+
+    public void PlaybuttonClickedSound()
+    {
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(buttonClicked);
+    }
+
+
+    public void PlayhideGrassSound()
+    {
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(hideGrass);
+    }
+
+    public void PlayOXrefillSound()
+    {
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(OXrefill);
+    }
+
 
     public void PlayHoverSound()
     {
@@ -33,9 +77,21 @@ public class AudioManager : MonoBehaviour
         SFXSource.PlayOneShot(NoClick);
     }
 
+    public void PlayPauseSound()
+    {
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(Pause);
+    }
+
+    
+    public void PlayUnPauseSound()
+    {
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(UnPause);
+    }
     private void Start()
     {
-        musicSource.volume = 0.2f;
+        musicSource.volume = 0.1f;
         musicSource.clip = background;
         musicSource.Play();
     }
