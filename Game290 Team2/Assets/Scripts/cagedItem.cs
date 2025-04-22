@@ -7,11 +7,13 @@ public class cagedItem : MonoBehaviour
     PlayerController playerController;
     public GameObject collectable;
     bool collected = false;
+    AudioManager audioManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -33,7 +35,7 @@ public class cagedItem : MonoBehaviour
             {
                 if (!collected)
                 {
-                    
+                    audioManager.PlayGunCollectSound(); 
                     collected = true;
                     Destroy(collectable);
                     playerController.collectAGunPiece();

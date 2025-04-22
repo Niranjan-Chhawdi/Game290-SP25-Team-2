@@ -15453,6 +15453,14 @@ PrefabInstance:
       propertyPath: background
       value: 
       objectReference: {fileID: 8300000, guid: 3fc26869a512b4e5187c9be6310ad8c2, type: 3}
+    - target: {fileID: 2058977372058247520, guid: 93db24cb330bab949a24220bec94a52b, type: 3}
+      propertyPath: friendRevive
+      value: 
+      objectReference: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
+    - target: {fileID: 2058977372058247520, guid: 93db24cb330bab949a24220bec94a52b, type: 3}
+      propertyPath: gunCollectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
     - target: {fileID: 4872523658283204158, guid: 93db24cb330bab949a24220bec94a52b, type: 3}
       propertyPath: m_Name
       value: Audio Manager

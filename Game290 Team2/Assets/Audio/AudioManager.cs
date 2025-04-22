@@ -30,6 +30,14 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip friendRevive;
 
+    public AudioClip gunCollectSound;
+
+    public void PlayGunCollectSound(){
+        SFXSource.Stop();
+        SFXSource.PlayOneShot(gunCollectSound);
+    }
+
+
     public void PlayReviveSound(){
         SFXSource.Stop();
         SFXSource.PlayOneShot(friendRevive);
