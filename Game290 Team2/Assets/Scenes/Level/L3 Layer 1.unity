@@ -915,6 +915,130 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ed646559845997428989484635642b1, type: 3}
+--- !u!1 &138535695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138535696}
+  - component: {fileID: 138535700}
+  - component: {fileID: 138535699}
+  - component: {fileID: 138535698}
+  - component: {fileID: 138535697}
+  m_Layer: 0
+  m_Name: CS_onwards (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &138535696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138535695}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.0034942422, w: 0.999994}
+  m_LocalPosition: {x: 38.38, y: 5.77, z: 0.066522114}
+  m_LocalScale: {x: 5.244014, y: 3.3066669, z: 3.695623}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 541277872}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.4}
+--- !u!114 &138535697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138535695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da17ecee5bd5054a85c2ce35d7ea801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  dialogue: 'I should find two key to escape
+
+
+    (F)'
+  textPosition: 1
+  anim: {fileID: 429336198}
+  popUpText: {fileID: 429336199}
+--- !u!61 &138535698
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138535695}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.14645407, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5162756, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &138535699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138535695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db6505fdd8263e4db035b0efbefe0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &138535700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138535695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f711140fe1c9b449cd1d41650fb83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &178727293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1554,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2058977372058247520, guid: 93db24cb330bab949a24220bec94a52b, type: 3}
+      propertyPath: friendRevive
+      value: 
+      objectReference: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
     - target: {fileID: 4872523658283204158, guid: 93db24cb330bab949a24220bec94a52b, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -56742,8 +56870,8 @@ Transform:
   - {fileID: 1802173977}
   - {fileID: 987276620}
   - {fileID: 2045279325}
-  - {fileID: 640177370}
   - {fileID: 2080646689}
+  - {fileID: 138535696}
   - {fileID: 31069992}
   - {fileID: 723974495}
   - {fileID: 304684019}
@@ -70565,11 +70693,11 @@ Transform:
   m_GameObject: {fileID: 640177369}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.00085529475, w: 0.9999997}
-  m_LocalPosition: {x: 20.95, y: -11.97, z: 0.066522114}
-  m_LocalScale: {x: 3.531572, y: 3.306667, z: 3.695623}
+  m_LocalPosition: {x: -0.01676178, y: -0.20912409, z: 0}
+  m_LocalScale: {x: 3.5315723, y: 3.3066673, z: 3.695623}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 541277872}
+  m_Father: {fileID: 1872965427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.098}
 --- !u!114 &640177371
 MonoBehaviour:
@@ -70584,7 +70712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
-  dialogue: 'Thank God you find me. Be careful
+  dialogue: 'Hide!!! Collect two key to escape
 
     (Press W to be invisible)
 
@@ -230899,7 +231027,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 640177370}
   m_Father: {fileID: 268737914}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1872965428

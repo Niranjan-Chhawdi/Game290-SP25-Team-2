@@ -57,4 +57,8 @@ public class UIFunction : MonoBehaviour
         PauseMenu.blocksRaycasts = false;
         Time.timeScale = 1f;
     }
+    public void backToUI()
+    {
+        SceneManager.LoadScene("UI");
+    }
 }
