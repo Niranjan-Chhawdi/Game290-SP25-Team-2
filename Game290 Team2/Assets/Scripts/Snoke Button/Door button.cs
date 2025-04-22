@@ -10,6 +10,7 @@ public class DoorButton : MonoBehaviour
     public GameObject[] objectsToKill;
     public Sprite button;
     public Sprite buttonPressed;
+    AudioManager audioManager;
 
     void Awake()
     {
@@ -19,6 +20,7 @@ public class DoorButton : MonoBehaviour
             Debug.LogError("SpriteRenderer not found on the GameObject.");
         }
         buttonSpriteRenderer.sprite = button;
+        audioManager = FindObjectOfType<AudioManager>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,6 +31,7 @@ public class DoorButton : MonoBehaviour
             {
                 if (obj != null)
                 {
+                    audioManager.PlaybuttonClickedSound(); 
                     Destroy(obj);
                 }
             }
@@ -39,6 +42,7 @@ public class DoorButton : MonoBehaviour
             SpriteRenderer doorRenderer = door.GetComponent<SpriteRenderer>();
             NavMeshObstacle navMeshObstacle = door.GetComponent<NavMeshObstacle>();
             navMeshObstacle.enabled = false;
+            audioManager.PlaybuttonClickedSound(); 
             //set the opacity of the sprite to 0.5f
             doorRenderer.color = new Color(doorRenderer.color.r, doorRenderer.color.g, doorRenderer.color.b, 0.4f);
             Debug.Log("Player has entered the trigger area. NavMeshObstacle disabled.");

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PowerUpData
   m_EditorClassIdentifier: 
   EnableDash: 1
-  EnableInvisible: 1
-  EnableStunEnemy: 1
-  EnableThrowStone: 1
+  EnableInvisible: 0
+  EnableStunEnemy: 0
+  EnableThrowStone: 0

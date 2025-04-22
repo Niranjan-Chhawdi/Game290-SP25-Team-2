@@ -14,6 +14,8 @@ public class Damage : MonoBehaviour
     float timeOutOfSight = 0f;
     enemyDetector enemyDetector;
 
+    AudioManager audioManager;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -29,6 +31,7 @@ public class Damage : MonoBehaviour
             Collider2D collider = GetComponent<Collider2D>();
         }
 
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     float distance()
@@ -45,6 +48,7 @@ public class Damage : MonoBehaviour
             {
                 phealth.takeDamge(damage * Time.deltaTime);// Apply damage over time
                 //Debug.Log("Player health: " + phealth.health);
+                audioManager.PlayDamageSound();
                 if (enemyDetector != null)
                 {
                     enemyDetector.timeOutOfSight = 0f; // Reset the timer when the player is in sight
@@ -64,6 +68,7 @@ public class Damage : MonoBehaviour
             if (phealth != null)
             {
                 phealth.takeDamge(damage * Time.deltaTime);// Apply damage over time
+                audioManager.PlayDamageSound();
                 //Debug.Log("Player health: " + phealth.health);
             }
             else

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
+    AudioManager audioManager;
     [SerializeField]
     public bool isKey = false;
     public bool isFriend = false;
@@ -29,6 +30,8 @@ public class Collectables : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
 
@@ -42,12 +45,14 @@ public class Collectables : MonoBehaviour
                 playerController.hasKey = true;
                 playerController.keyNum++;
                 Debug.Log("Got Key!");
+                audioManager.PlaykeyCollectSound(); 
             }
 
             if (isFriend)
             {
                 checkAbility(AbilityName);
                 playerHealth.refillAll();
+                audioManager.PlayReviveSound(); 
             }
             Destroy(gameObject);
         }
