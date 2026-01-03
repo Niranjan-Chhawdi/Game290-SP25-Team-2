@@ -1,6 +1,7 @@
 # Fallen X
 
 released on Itch.io ```https://twugame.itch.io/fallen-x```
+<img width="1437" height="809" alt="image" src="https://github.com/user-attachments/assets/b7bfd9ee-d6e7-4caa-a66a-67afb9ac1b5f" />
 
 ## Overview
 This repository contains the Unity project developed by Team 2 for the Game 290 course during Spring 2025.
